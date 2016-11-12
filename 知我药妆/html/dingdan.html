@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的订单</title>
+    <link href="../css/index.css" rel="stylesheet" type="text/css">
+    <link href="../css/zhiwo_shopcity.css" rel="stylesheet" type="text/css">
+    <link href="../css/mycar.css" rel="stylesheet" type="text/css">
+    <link href="../css/zhuce_denglu.css" rel="stylesheet" type="text/css">
+    <link href="../css/dingdan.css" rel="stylesheet" type="text/css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery.cookie.js"></script>
+    <script src="../js/yaozhuang.js"></script>
+    <script src="../js/mycar.js"></script>
+    <script src="../js/dingdan.js"></script>
+    <script src="../js/distpicker.data.js"></script>
+    <script src="../js/distpicker.js"></script>
+    <script src="../js/main.js"></script>
+
+
+</head>
+<body>
+
+<div class="header_topnav">
+    <div class="header_topnav_cont w960">
+        <div class="header_top_left left">
+            <ul>
+                <li>欢迎来到知我！这里，用专业呵护美丽。</li>
+                <li><a href="denglu.html" class="hover">请登录</a></li>
+                <li><a href="zhuce.html" class="hover">快速注册</a></li>
+            </ul>
+        </div>
+        <div class="header_top_right right">
+            <ul>
+                <li class="item_personal weixin">
+                    <a href="javascript:;"><span>微信商城</span><i></i></a>
+                    <div class="wechat"><img src="../img/weixin.jpg"></div>
+                </li>
+                <li class="item_phone"><a href="javascript:;">手机知我</a></li>
+                <li class="item_personal xiaowo">
+                    <a href="denglu.html"><span>我的小窝</span><i></i></a>
+                    <div class="myhome">
+                        <ul>
+                            <li><a href="javascript:;">我的订单</a></li>
+                            <li><a href="javascript:;">我的优惠券</a></li>
+                            <li><a href="javascript:;">我的收藏</a></li>
+                            <li><a href="javascript:;">我的预订</a></li>
+                            <li><a href="javascript:;">我的积分</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="item_line">|</li>
+                <li class="item_personal item_service">
+                    <a href="javascript:;"><span>客户服务</span><i></i></a>
+                    <div class="kehu">
+                        <ul>
+                            <li><a href="javascript:;">帮助中心</a></li>
+                            <li><a href="javascript:;">新浪微博</a></li>
+                            <li><a href="javascript:;">正品承诺</a></li>
+                            <li><a href="javascript:;">真伪查询</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="denglu_zhuce">
+    <div class="denglu w960">
+        <div class="header_clogo left"><a href="index.html"><img src="../img/logo.jpg" alt="知我药妆"></a></div>
+        <div class="header_payflow_img">
+            <ul class="step_img">
+                <li class="step_item step_item_present">
+                    <span class="step_num">1</span>
+                    <span class="step_line"><i></i></span>
+                </li>
+                <li class="step_item step_item_present">
+                    <span class="step_line"><i></i></span>
+                    <span class="step_num">2</span>
+                    <span class="step_line"><i></i></span>
+                </li>
+                <li class="step_item ">
+                    <span class="step_line"><i></i></span>
+                    <span class="step_num">3</span>
+                </li>
+            </ul>
+            <ul class="step_txt">
+                <li class="step_txt_1 step_item_present">我的购物车</li>
+                <li class="step_txt_2 ">确认订单信息</li>
+                <li class="step_txt_3 ">成功提交订单</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="gg_box">
+
+<div class="addressbox">
+    <div class="addressbox1">
+        <h2><span>1</span><em>收货地址</em></h2>
+        <p><b>收件人姓名：</b><i>*</i>
+                <input class="paycfm_pername" type="text">
+                <span class="error_tip">请填写正确的收货人姓名</span>
+        </p>
+        <div><b>所在地区：</b><i>*</i>
+                <table data-toggle="distpicker" class="di_qu">
+                    <tr>
+                        <td class="form-group">
+                            <select class="form-control" id="province1"></select>
+                        </td>
+                        <td class="form-group">
+                            <select class="form-control" id="city1"></select>
+                        </td>
+                        <td class="form-group">
+                            <select class="form-control" id="district1"></select>
+                        </td>
+                    </tr>
+                </table>
+                <span class="error_tip">请填写完整的地址信息</span>
+        </div>
+            <p><b>详细地址：</b><i>*</i>
+                <input class="paycfm_peraddress" placeholder="请填写详细地址">
+                <span class="error_tip">请填写详细地址，不少于3个汉字，不能全部是数字/字母</span></p>
+            <p><b>邮政编码：</b><i>*</i>
+                <input class="paycfm_peryoubian" name="postalcode" type="text">
+                <span class="error_tip">邮政编码错误</span></p>
+            <p class="paycfm_phonewrite"><b>手机号码：</b><i>*</i>
+                <input class="paycfm_perphone" name="mobile" type="text">
+                <span class="contact_ele" style="display: inline-block;width: 50px">或</span>
+                <b>固定电话：</b><input class="paycfm_perphone" name="phone" type="text">
+                <span class="error_tip">请填写正确手机号码，手机号码为11位数字</span></p>
+            <p><b>邮箱：</b>&nbsp;<input class="paycfm_peremail" name="email" type="text">
+                <span class="error_tip">邮箱错误</span></p>
+            <p class="paycfm_savebtn"><a href="javascript:;">保存并使用</a></p>
+    </div>
+
+    <div class="addressbox2">
+        <h2><span>2</span><em>商品清单</em><a href="mycar.html"><i>&lt;&lt;</i>返回购物车</a></h2>
+        <div class="paycfm_procont">
+            <div class="paycfm_prolist">
+                <table class="table_item paypro_table">
+                    <tr class="thead">
+                        <th class="paytable_name">选购的商品</th><th class="paytable_price">单价</th><th class="paytable_amonut">数量</th><th class="paytable_totle">金额小计</th>
+                    </tr>
+                </table>
+            </div>
+            <div class="paycfm_payyouhui">
+                <p class="paycfm_yhwaytitle ">使用知我药妆优惠券</p>
+                <p class="hide"><input class="paycfm_txt" type="text" placeholder="请输入优惠券号"><input class="paycfm_btn" type="button" value="点击使用"></p>
+                <p class="paycfm_yhwaytitle">请输入红包号</p>
+                <p class="hide"><input class="paycfm_txt" type="text" placeholder="请输入优惠券号"><input class="paycfm_btn" type="button" value="点击使用"></p>
+            </div>
+            <div class="paycfm_yue"><p>账户余额：<span>0.00</span></p></div>
+            <div class="paycfm_propaylist">
+                <p><em><i>￥</i><span id="total_amount">0.00</span></em><span class="r">总价：</span></p>
+                <p><em><i>￥</i><span id="delivery_fee">5.00</span></em><span class="r">运费：</span></p>
+                <p class="paycfm_itemtotle"><em><i>￥</i><span class="need_pay">0.00</span></em><span class="r">需支付总额：</span></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="addressbox3" id="payway">
+        <h2 class="paycfm_title"><span>3</span><em>支付方式</em></h2>
+        <div class="paycfm_waysel">
+            <div class="payonline_way">
+                <dl style="overflow: auto">
+                    <dt>支付平台</dt>
+                    <dd class="payway_ paycfm_itemtotle">
+                        <label></label>
+                        <div class="payonline_waylist"><i></i></div>
+                    </dd>
+                    <dd class="payway_">
+                        <label></label>
+                        <div class="payonline_waylist zhi2"><i></i></div>
+                    </dd>
+                </dl>
+
+                <dl class="payonline_terrace" style="display: none">
+                    <dd class="payway_">
+                        <label></label>
+                        <div class="payonline_waylist Wcpay"><i></i></div>
+                    </dd>
+                    <dd class="payway_">
+                        <label></label>
+                        <div class="payonline_waylist Tenpay"><i></i></div>
+                    </dd>
+                    <dd class="payway_">
+                        <label></label>
+                        <div class="payonline_waylist Cmpay"><i></i></div>
+                    </dd>
+                    <dd class=" payway_">
+                        <label></label>
+                        <div class="payonline_waylist Zhpay"><i></i></div>
+                    </dd>
+                </dl>
+                <div class="paymore_btn">点击更多支付方式<i></i></div>
+
+
+                <dl>
+                    <dt>网银支付</dt>
+                    <dd class="payway_">
+                        <label></label>
+                        <div class="payonline_waylist Alipay_CMB"><i></i></div>
+                    </dd>
+                    <dd class="payway_">
+                        <label></label>
+                        <div class="payonline_waylist Alipay_CCB"><i></i></div>
+                    </dd>
+                    <dd class="payway_">
+                        <label></label>
+                        <div class="payonline_waylist Alipay_ICBCB2C"><i></i></div>
+                    </dd>
+                    <dd class="payway_">
+                        <label></label>
+                        <div class="payonline_waylist Alipay_BOCB2C"><i></i></div>
+                    </dd>
+                    <dd class="payway_">
+                        <label></label>
+                        <div class="payonline_waylist Alipay_ABC"><i></i></div>
+                    </dd>
+                    <dd class="payway_">
+                        <label></label>
+                        <div class="payonline_waylist Alipay_COMM"><i></i></div>
+                    </dd>
+                    <dd class="payway_">
+                        <label></label>
+                        <div class="payonline_waylist Alipay_PSBC-DEBIT"><i></i></div>
+                    </dd>
+                    <dd class="payway_">
+                        <label></label>
+                        <div class="payonline_waylist Alipay_CITIC"><i></i></div>
+                    </dd>
+                    <dd class="payway_">
+                        <label></label>
+                        <div class="payonline_waylist Alipay_CIB"><i></i></div>
+                    </dd>
+                    <dd class="payway_">
+                        <label></label>
+                        <div class="payonline_waylist Alipay_SPDB"><i></i></div>
+                    </dd>
+                    <dd class="payway_">
+                        <label></label>
+                        <div class="payonline_waylist Alipay_CMBC"><i></i></div>
+                    </dd>
+                    <dd class="payway_">
+                        <label></label>
+                        <div class="payonline_waylist Alipay_CEBBANK"><i></i></div>
+                    </dd>
+                    <dd class="payway_">
+                        <label></label>
+                        <div class="payonline_waylist Alipay_NBBANK"><i></i></div>
+                    </dd>
+                    <dd class="payway_">
+                        <label></label>
+                        <div class="payonline_waylist Alipay_SDB"><i></i></div>
+                    </dd>
+                    <dd class="payway_">
+                        <label></label>
+                        <div class="payonline_waylist Alipay_BJRCB"><i></i></div>
+                    </dd>
+                    <dd class="payway_">
+                        <label></label>
+                        <div class="payonline_waylist Alipay_SPABANK"><i></i></div>
+                    </dd>
+                    <dd class="payway_">
+                        <label></label>
+                        <div class="payonline_waylist Alipay_GDB"><i></i></div>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>信用卡支付（快捷支付)</dt>
+                    <dd class="payway_">
+                        <label></label>
+                        <div class="payonline_waylist Alipay_CMB"><i></i><span>快捷</span></div>
+                    </dd>
+                    <dd class="payway_">
+                        <label></label>
+                        <div class="payonline_waylist Alipay_CCB"><i></i><span>快捷</span></div>
+                    </dd>
+                    <dd class="payway_">
+                        <label></label>
+                        <div class="payonline_waylist Alipay_ICBCB2C"><i></i><span>快捷</span></div>
+                    </dd>
+                    <dd class="payway_">
+                        <label></label>
+                        <div class="payonline_waylist Alipay_BOCB2C"><i></i><span>快捷</span></div>
+                    </dd>
+                    <dd class="payway_">
+                        <label></label>
+                        <div class="payonline_waylist Alipay_ABC"><i></i><span>快捷</span></div>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <div class="addressbox3">
+        <h2><span>4</span><em>订单备注</em></h2>
+        <div class="paycfm_contbox">
+            <div class="paycfm_beizhutip">
+                <p>如您有特殊要求，请在此处留言，限140字以内</p>
+                <input id="remarks_" type="text">
+            </div>
+            <div class="payonline_gobox">
+                <p><a class="payonline_gopaybtn" href="javascript:;">确定订单</a><span>应付金额：<i>￥</i><em class="need_pay">0.00</em></span></p>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+
+
+<div id="foot">
+    <div class="foot_list w960">
+        <dl>
+            <dt>真品保证</dt>
+            <dd><a href="javascript:;">品牌合作</a></dd>
+            <dd><a href="javascript:;">严格把关</a></dd>
+            <dd><a href="javascript:;">百度投资</a></dd>
+            <dd><a href="javascript:;">全球品牌直供</a></dd>
+        </dl>
+        <dl>
+            <dt>30天包退</dt>
+            <dd><a href="javascript:;">退换货政策</a></dd>
+            <dd><a href="javascript:;">办理退换货</a></dd>
+            <dd><a href="javascript:;">售后服务</a></dd>
+        </dl>
+        <dl>
+            <dt>2件包邮</dt>
+            <dd><a href="javascript:;">配送政策</a></dd>
+            <dd><a href="javascript:;">快递查询</a></dd>
+        </dl>
+        <dl>
+            <dt>药妆专柜</dt>
+            <dd><a href="javascript:;">肤质判定</a></dd>
+            <dd><a href="javascript:;">肌肤问题</a></dd>
+            <dd><a href="javascript:;">达人推荐</a></dd>
+            <dd><a href="javascript:;">护肤常识</a></dd>
+        </dl>
+        <dl>
+            <dt>关于知我</dt>
+            <dd><a href="javascript:;">知我介绍</a></dd>
+            <dd><a href="javascript:;">商务合作</a></dd>
+            <dd><a href="javascript:;">友情链接</a></dd>
+            <dd><a href="javascript:;">开放API</a></dd>
+        </dl>
+        <dl>
+            <dt>新手指南</dt>
+            <dd><a href="javascript:;">购物流程</a></dd>
+            <dd><a href="javascript:;">支付方式</a></dd>
+            <dd><a href="javascript:;">化妆品品牌大全</a></dd>
+        </dl>
+        <dl>
+            <dt>联系方式</dt>
+            <dd><a id="online_service" href="javascript:;">在线客服咨询</a></dd>
+            <dd class="contact_method">热线</dd>
+            <dd class="contact_phone">400-630-1018</dd>
+        </dl>
+        <dl class="footer_wechat">
+            <dt>知我微信商城</dt>
+            <dd><img src="../img/saoma.jpg"></dd>
+        </dl>
+    </div>
+</div>
+<div class="footer_blue_box">
+    <ul class="w1100">
+        <li class="fcb_invest"><span>百度投资</span></li>
+        <li class="fcb_quality"><span>真品保证</span></li>
+        <li class="fcb_return"><span>30天包退</span></li>
+        <li class="fcb_mail"><span>2件包邮</span></li>
+    </ul>
+</div>
+<div class="end">
+    <div class="end_inner w1100">
+        <p class="footer_c_text1">@2011-2014 般若天成（北京）科技有限公司 zhiwo.com 保留一切权利。客服热线：400-630-1018</p>
+        <p class="footer_c_text2"><a href="javascript:;">京ICP备10047008号</a> |<a href="http://www.miibeian.gov.cn/" target="_blank" rel="nofollow">京ICP证110762号</a> | 网公安备1101054365号 | 营业执照 </p>
+        <p class="footer_c_text3">
+            <img src="../img/footer1.jpg" alt="支付宝特约商家">
+            <img src="../img/footer2.jpg" alt="快捷支付">
+            <img src="../img/footer3.jpg" alt="网上交易保障中心">
+        </p>
+    </div>
+</div>
+<a class="tanchu" href="javascript:;"><p class="close"></p></a>
+</body>
+</html>

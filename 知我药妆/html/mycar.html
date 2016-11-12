@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购物车</title>
+    <link href="../css/index.css" rel="stylesheet" type="text/css">
+    <link href="../css/zhiwo_shopcity.css" rel="stylesheet" type="text/css">
+    <link href="../css/mycar.css" rel="stylesheet" type="text/css">
+    <link href="../css/zhuce_denglu.css" rel="stylesheet" type="text/css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery.cookie.js"></script>
+    <script src="../js/yaozhuang.js"></script>
+    <script src="../js/mycar.js"></script>
+</head>
+<body>
+<div class="header_topnav">
+    <div class="header_topnav_cont w960">
+        <div class="header_top_left left">
+            <ul>
+                <li>欢迎来到知我！这里，用专业呵护美丽。</li>
+                <li><a href="denglu.html" class="hover">请登录</a></li>
+                <li><a href="zhuce.html" class="hover">快速注册</a></li>
+            </ul>
+        </div>
+        <div class="header_top_right right">
+            <ul>
+                <li class="item_personal weixin">
+                    <a href="javascript:;"><span>微信商城</span><i></i></a>
+                    <div class="wechat"><img src="../img/weixin.jpg"></div>
+                </li>
+                <li class="item_phone"><a href="javascript:;">手机知我</a></li>
+                <li class="item_personal xiaowo">
+                    <a href="denglu.html"><span>我的小窝</span><i></i></a>
+                    <div class="myhome">
+                        <ul>
+                            <li><a href="javascript:;">我的订单</a></li>
+                            <li><a href="javascript:;">我的优惠券</a></li>
+                            <li><a href="javascript:;">我的收藏</a></li>
+                            <li><a href="javascript:;">我的预订</a></li>
+                            <li><a href="javascript:;">我的积分</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="item_line">|</li>
+                <li class="item_personal item_service">
+                    <a href="javascript:;"><span>客户服务</span><i></i></a>
+                    <div class="kehu">
+                        <ul>
+                            <li><a href="javascript:;">帮助中心</a></li>
+                            <li><a href="javascript:;">新浪微博</a></li>
+                            <li><a href="javascript:;">正品承诺</a></li>
+                            <li><a href="javascript:;">真伪查询</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="denglu_zhuce">
+    <div class="denglu w960">
+        <div class="header_clogo left"><a href="index.html"><img src="../img/logo.jpg" alt="知我药妆"></a></div>
+        <div class="header_payflow_img">
+            <ul class="step_img">
+                <li class="step_item step_item_present">
+                    <span class="step_num">1</span>
+                    <span class="step_line"><i></i></span>
+                </li>
+                <li class="step_item ">
+                    <span class="step_line"><i></i></span>
+                    <span class="step_num">2</span>
+                    <span class="step_line"><i></i></span>
+                </li>
+                <li class="step_item ">
+                    <span class="step_line"><i></i></span>
+                    <span class="step_num">3</span>
+                </li>
+            </ul>
+            <ul class="step_txt">
+                <li class="step_txt_1 step_item_present">我的购物车</li>
+                <li class="step_txt_2 ">确认订单信息</li>
+                <li class="step_txt_3 ">成功提交订单</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="yayang">
+    <div class="cb_title_h2 w960">
+        <div class="car_empty">
+            <div class="shopcar_empty_img"><img src="../img/empty.png"></div>
+            <div class="shopcar_empty_tip">
+                <p class="shopcar_empty_tip1">您的购物车中没有商品，请先去挑选心爱的商品吧！</p>
+                <p class="shopcar_empty_tip2"><span>您可以</span><a href="index.html">返回首页</a><span>挑选喜欢的商品！</span></p>
+            </div>
+        </div>
+
+        <div class="shopping_car w960" style="display: none" >
+            <div class="no_empty">
+                <h2>
+                    <p class="mycart_htitle"><span>我的购物车</span><i>My Cart</i></p>
+                    <p class="mycart_htip"><span>运费每单<em>5</em>元</span><span>购买<em>任意两件</em>免运费</span></p>
+                </h2>
+                <div class="table_nav">
+                    <ul>
+                        <li class="table_nav_name">选购的商品</li>
+                        <li class="table_nav_price">单价</li>
+                        <li class="table_nav_amount">数量</li>
+                        <li class="table_nav_allpay">金额小计</li>
+                        <li class="table_nav_integral">赠送积分</li>
+                        <li class="table_nav_operate">操作</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="w960 goods_buy"><div class="buybuy"> </div></div>
+
+            <div class="add_price">
+                <h2><p class="mycart_htitle"><span>加价购</span><i>INCREASE PURCHASE</i></p></h2>
+                <div class="purchase cb_title_h2">
+                    <div class="purchase_list_box">
+                        <div class="purchase_list_nav">
+                            <ul>
+                                <li class="pln_current wu_left"><span><em>10</em>元以下专区</span></li>
+                                <li class=""><span><em>10</em>元至<em>30</em>元专区</span></li>
+                                <li class=""><span><em>30</em>元以上专区</span></li>
+                            </ul>
+                        </div>
+                        <div class="purchase_list_cont">
+                            <div class="purchase_cont_page show_time">
+                                <ul>
+                                    <li>
+                                        <div class="goods_img"><img src="../img/q1.jpg"></div>
+                                        <div class="goods_price">
+                                            <p class="pro_name">我的心机随机发面膜1片</p>
+                                            <p class="now_price"><span class="price_day">￥1</span><i>￥</i><del>1.00</del></p>
+                                            <p></p><p class="buy_btnend">已卖完</p>	                                <p></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="goods_img"><img src="../img/q2.jpg"></div>
+                                        <div class="goods_price">
+                                            <p class="pro_name">suki迷你香水甲油 342紫色</p>
+                                            <p class="now_price"><span class="price_day">￥8</span><i>￥</i><del>20.00</del></p>
+                                            <p class="buy_btn"><a href="javascript:;">加入购物车</a></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="goods_img"><img src="../img/q3.jpg"></div>
+                                        <div class="goods_price">
+                                            <p class="pro_name">杰西卡的旅行-阳明山花漾保湿蚕丝面膜(单片)</p>
+                                            <p class="now_price"><span class="price_day">￥7.98</span><i>￥</i><del>20.00</del></p>
+                                            <p class="buy_btn"><a href="javascript:;">加入购物车</a></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="goods_img"><img src="../img/q4.jpg"></div>
+                                        <div class="goods_price">
+                                            <p class="pro_name">阿里山茶多酚清盈蚕丝面膜(单片)</p>
+                                            <p class="now_price"><span class="price_day">￥7.98</span><i>￥</i><del>20.00</del></p>
+                                            <p class="buy_btn"><a href="javascript:;">加入购物车</a>	                                </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="goods_img"><img src="../img/q5.jpg"></div>
+                                        <div class="goods_price">
+                                            <p class="pro_name">理肤泉特安洁面泡沫3ml</p>
+                                            <p class="now_price"><span class="price_day">￥9.9</span><i>￥</i><del>19.00</del></p>
+                                            <p></p><p class="buy_btnend">已卖完</p><p></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="goods_img"><img src="../img/q6.jpg"></div>
+                                        <div class="goods_price">
+                                            <p class="pro_name">巨型一号丝瓜水美肤液(配方滋润型)320ml</p>
+                                            <p class="now_price"><span class="price_day">￥9.9</span><i>￥</i><del>35.00</del></p>
+                                            <p></p><p class="buy_btnend">已卖完</p><p></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="goods_img"><img src="../img/q7.jpg"></div>
+                                        <div class="goods_price">
+                                            <p class="pro_name">薇姿泉之净滢润泡沫洁面膏15ml</p>
+                                            <p class="now_price"><span class="price_day">￥9.9</span><i>￥</i><del>28.00</del></p>
+                                            <p></p><p class="buy_btnend">已卖完</p><p></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="goods_img"><img src="../img/q8.jpg"></div>
+                                        <div class="goods_price">
+                                            <p class="pro_name">雪花秀弹力面霜+润燥精华2件套 滋阴保湿改善皮肤</p>
+                                            <p class="now_price"><span class="price_day">￥9.9</span><i>￥</i><del>33.00</del></p>
+                                            <p></p><p class="buy_btnend">已卖完</p><p></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="goods_img"><img src="../img/q9.jpg"></div>
+                                        <div class="goods_price">
+                                            <p class="pro_name">知我药妆芦荟胶40g</p>
+                                            <p class="now_price"><span class="price_day">￥9.9</span><i>￥</i><del>38.00</del></p>
+                                            <p class="buy_btn"><a href="javascript:;">加入购物车</a></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="goods_img"><img src="../img/q10.jpg"></div>
+                                        <div class="goods_price">
+                                            <p class="pro_name">艾禾美小苏打牙膏 清新洁净25g*3支装</p>
+                                            <p class="now_price"><span class="price_day">￥9.9</span><i>￥</i><del>39.00</del></p>
+                                            <p class="buy_btn"><a href="javascript:;">加入购物车</a></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="goods_img"><img src="../img/q11.jpg"></div>
+                                        <div class="goods_price">
+                                            <p class="pro_name">德国Herbacin小甘菊经典护手霜20ml 小甘菊护手霜</p>
+                                            <p class="now_price"><span class="price_day">￥9.9</span><i>￥</i><del>79.00</del></p>
+                                            <p></p><p class="buy_btnend">已卖完</p><p></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="goods_img"><img src="../img/q12.jpg"></div>
+                                        <div class="goods_price">
+                                            <p class="pro_name">兰芝臻白修护柔肤乳液15ml</p>
+                                            <p class="now_price"><span class="price_day">￥9.8</span><i>￥</i><del>35.00</del></p>
+                                            <p></p><p class="buy_btnend">已卖完</p><p></p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="purchase_cont_page">
+                                <ul>
+                                    <li>
+                                        <div class="goods_img"><img src="../img/q13.jpg"></div>
+                                        <div class="goods_price">
+                                            <p class="pro_name">千纤草丝瓜水500ml</p>
+                                            <p class="now_price"><span class="price_day">￥15</span><i>￥</i><del>48.00</del></p>
+                                            <p class="buy_btn"><a href="javascript:;">加入购物车</a></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="goods_img"><img src="../img/q14.jpg"></div>
+                                        <div class="goods_price">
+                                            <p class="pro_name">三本旅行小伴（7天装）</p>
+                                            <p class="now_price"><span class="price_day">￥28</span><i>￥</i><del>46.00</del></p>
+                                            <p class="buy_btn"><a href="javascript:;">加入购物车</a></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="goods_img"><img src="../img/q15.jpg"></div>
+                                        <div class="goods_price">
+                                            <p class="pro_name">suki迷你香水甲油 347中国红</p>
+                                            <p class="now_price"><span class="price_day">￥12.9</span><i>￥</i><del>20.00</del></p>
+                                            <p class="buy_btn"><a href="javascript:;">加入购物车</a></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="goods_img"><img src="../img/16.jpg"></div>
+                                        <div class="goods_price">
+                                            <p class="pro_name">6203片仔癀祛痱花露水195ml</p>
+                                            <p class="now_price"><span class="price_day">￥12.9</span><i>￥</i><del>19.90</del></p>
+                                            <p class="buy_btn"><a href="javascript:;">加入购物车</a></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="goods_img"><img src="../img/q17.jpg"></div>
+                                        <div class="goods_price">
+                                            <p class="pro_name">澳格菲胶原蛋白黄金眼贴膜10对</p>
+                                            <p class="now_price"><span class="price_day">￥12.9</span><i>￥</i><del>29.00</del></p>
+                                            <p></p><p class="buy_btnend">已卖完</p><p></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="goods_img"><img src="../img/q18.jpg"></div>
+                                        <div class="goods_price">
+                                            <p class="pro_name">倩碧四色眼影盘（带镜刷）</p>
+                                            <p class="now_price"><span class="price_day">￥16</span><i>￥</i><del>80.00</del></p>
+                                            <p></p><p class="buy_btnend">已卖完</p><p></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="goods_img"><img src="../img/q19.jpg"></div>
+                                        <div class="goods_price">
+                                            <p class="pro_name">倩碧果漾唇蜜7ml(三色随机发放)</p>
+                                            <p class="now_price"><span class="price_day">￥18</span><i>￥</i><del>85.00</del></p>
+                                            <p></p><p class="buy_btnend">已卖完</p><p></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="goods_img"><img src="../img/q20.jpg"></div>
+                                        <div class="goods_price">
+                                            <p class="pro_name">菲诗小铺天然泡沫洗面奶（水蜜桃）170ml</p>
+                                            <p class="now_price"><span class="price_day">￥18.5</span><i>￥</i><del>158.00</del></p>
+                                            <p class="buy_btn"><a href="javascript:;">加入购物车</a></p>
+                                        </div>
+                                    </li>
+                                    <li id="raisebuy_goods_1115371">
+                                        <div class="goods_img"><img src="../img/q21.jpg"></div>
+                                        <div class="goods_price">
+                                            <p class="pro_name">Suki 眉笔刷02 深咖啡色</p>
+                                            <p class="now_price"><span class="price_day">￥19.9</span><i>￥</i><del>35.00</del></p>
+                                            <p class="buy_btn"><a href="javascript:;">加入购物车</a></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="goods_img"><img src="../img/q22.jpg"></div>
+                                        <div class="goods_price">
+                                            <p class="pro_name">韩束芦荟修护凝胶180g</p>
+                                            <p class="now_price"><span class="price_day">￥23</span><i>￥</i><del>59.00</del></p>
+                                            <p class="buy_btn"><a href="javascript:;">加入购物车</a></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="goods_img"><img src="../img/q23.jpg"></div>
+                                        <div class="goods_price">
+                                            <p class="pro_name">韩国PhytoTree/cheese芝士起司奶酪护手霜50g</p>
+                                            <p class="now_price"><span class="price_day">￥22</span><i>￥</i><del>47.00</del></p>
+                                            <p></p><p class="buy_btnend">已卖完</p><p></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="goods_img"><img src="../img/q24.jpg"></div>
+                                        <div class="goods_price">
+                                            <p class="pro_name">Arm Hammer艾禾美小苏打摇摇瓶 340g 艾禾美小苏打</p>
+                                            <p class="now_price"><span class="price_day">￥21.9</span><i>￥</i><del>65.80</del></p>
+                                            <p class="buy_btn"><a href="javascript:;">加入购物车</a></p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="purchase_cont_page">
+                                <ul>
+                                    <li>
+                                        <div class="goods_img"><img src="../img/q25.jpg"></div>
+                                        <div class="goods_price">
+                                            <p class="pro_name">英国AA网佛手柑高保湿手工皂125g</p>
+                                            <p class="now_price"><span class="price_day">￥33</span><i>￥</i><del>75.00</del></p>
+                                            <p class="buy_btn"><a href="javascript:;">加入购物车</a></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="goods_img"><img src="../img/q26.jpg"></div>
+                                        <div class="goods_price">
+                                            <p class="pro_name">舒适达速效抗敏牙膏180g</p>
+                                            <p class="now_price"><span class="price_day">￥36</span><i>￥</i><del>79.00</del></p>
+                                            <p></p><p class="buy_btnend">已卖完</p><p></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="goods_img"><img src="../img/q27.jpg"></div>
+                                        <div class="goods_price">
+                                            <p class="pro_name">NatureRepublic韩国自然乐园芦荟胶300ml</p>
+                                            <p class="now_price"><span class="price_day">￥36</span><i>￥</i><del>158.00</del></p>
+                                            <p class="buy_btn"><a href="javascript:;">加入购物车</a></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="goods_img"><img src="../img/q28.jpg"></div>
+                                        <div class="goods_price">
+                                            <p class="pro_name">珂莱瑞蜗牛粘液透白保湿面膜6片/盒</p>
+                                            <p class="now_price"><span class="price_day">￥38</span><i>￥</i><del>98.00</del></p>
+                                            <p></p><p class="buy_btnend">已卖完</p><p></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="goods_img"><img src="../img/q29.jpg"></div>
+                                        <div class="goods_price">
+                                            <p class="pro_name">韩束魔力水珠补水霜50g</p>
+                                            <p class="now_price"><span class="price_day">￥39</span><i>￥</i><del>79.00</del></p>
+                                            <p></p><p class="buy_btnend">已卖完</p><p></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="goods_img"><img src="../img/q30.jpg"></div>
+                                        <div class="goods_price">
+                                            <p class="pro_name">杰西卡的旅行-阳明山花漾保湿蚕丝面膜(五片)+日月潭光感净透蚕丝面膜(五片)</p>
+                                            <p class="now_price"><span class="price_day">￥39.9</span><i>￥</i><del>159.00</del></p>
+                                            <p></p><p class="buy_btnend">已卖完</p><p></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="goods_img"><img src="../img/q31.jpg"></div>
+                                        <div class="goods_price">
+                                            <p class="pro_name">森田药妆玻尿酸微导保湿面膜5片</p>
+                                            <p class="now_price"><span class="price_day">￥43.9</span><i>￥</i><del>59.00</del></p>
+                                            <p class="buy_btn"><a href="javascript:;">加入购物车</a></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="goods_img"><img src="../img/q32.jpg"></div>
+                                        <div class="goods_price">
+                                            <p class="pro_name">碧缇丝免水洗发喷雾(柔亮金棕)200ml</p>
+                                            <p class="now_price"><span class="price_day">￥89.9</span><i>￥</i><del>145.00</del></p>
+                                            <p class="buy_btn"><a href="javascript:;">加入购物车</a></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="goods_img"><img src="../img/q33.jpg"></div>
+                                        <div class="goods_price">
+                                            <p class="pro_name">婵真美菁柔肤保湿乳液130ml</p>
+                                            <p class="now_price"><span class="price_day">￥99</span><i>￥</i><del>116.00</del></p>
+                                            <p class="buy_btn"><a href="javascript:;">加入购物车</a></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="goods_img"><img src="../img/q34.jpg"></div>
+                                        <div class="goods_price">
+                                            <p class="pro_name">国内专柜正品理肤泉每日隔离乳液SPF30+PA+++（修颜型）30ml</p>
+                                            <p class="now_price"><span class="price_day">￥178</span><i>￥</i><del>260.00</del></p>
+                                            <p class="buy_btn"><a href="javascript:;">加入购物车</a></p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="pinpai w960 xiaozhi">
+            <span>今日特卖推荐</span><i>RECOMMENDED SALE TODAY</i>
+            <a href="javascript:;" class="bfd_img_logo"></a>
+        </h2>
+        <div class="wufeng_banner w960 gouwu_tuijian">
+            <ul>
+                <li>
+                    <a class="goods_img" href="javascript:;"><img src="../img/g13.jpg"></a>
+                    <div class="goods_price">
+                        <p class="pro_name"><a href="javascript:;">兰蔻光泽润养面霜\日霜15ml 兰蔻光泽润养晚霜 15ml</a></p>
+                        <p class="now_price"><i>￥</i><span class="price_day">99</span>
+                            <del>￥427</del>
+                        </p>
+                        <p class="buy_btn"><a class="put-cart" href="javascript:;">加入购物车</a></p>
+                    </div>
+                </li>
+                <li>
+                    <a class="goods_img" href="javascript:;"><img src="../img/g14.jpg"></a>
+                    <div class="goods_price">
+                        <p class="pro_name"><a href="javascript:;">兰蔻光泽润养面霜\日霜15ml 兰蔻光泽润养晚霜 15ml</a></p>
+                        <p class="now_price"><i>￥</i><span class="price_day">99</span>
+                            <del>￥427</del>
+                        </p>
+                        <p class="buy_btn"><a class="put-cart" href="javascript:;">加入购物车</a></p>
+                    </div>
+                </li>
+                <li>
+                    <a class="goods_img" href="javascript:;"><img src="../img/g15.jpg"></a>
+                    <div class="goods_price">
+                        <p class="pro_name"><a href="javascript:;">兰蔻光泽润养面霜\日霜15ml 兰蔻光泽润养晚霜 15ml</a></p>
+                        <p class="now_price"><i>￥</i><span class="price_day">99</span>
+                            <del>￥427</del>
+                        </p>
+                        <p class="buy_btn"><a class="put-cart" href="javascript:;">加入购物车</a></p>
+                    </div>
+                </li>
+                <li class="last">
+                    <a class="goods_img" href="javascript:;"><img src="../img/g16.jpg"></a>
+                    <div class="goods_price">
+                        <p class="pro_name"><a href="javascript:;">兰蔻光泽润养面霜\日霜15ml 兰蔻光泽润养晚霜 15ml</a></p>
+                        <p class="now_price"><i>￥</i><span class="price_day">99</span>
+                            <del>￥427</del>
+                        </p>
+                        <p class="buy_btn"><a class="put-cart" href="javascript:;">加入购物车</a></p>
+                    </div>
+                </li>
+
+                <li>
+                    <a class="goods_img" href="javascript:;"><img src="../img/g1.jpg"></a>
+                    <div class="goods_price">
+                        <p class="pro_name"><a href="javascript:;">英国boots小黄瓜眼霜15ml</a></p>
+                        <p class="now_price"><i>￥</i><span class="price_day">35</span>
+                            <del>￥69</del>
+                        </p>
+                        <p class="buy_btn"><a class="put-cart" href="javascript:;">加入购物车</a></p>
+                    </div>
+                </li>
+                <li>
+                    <a class="goods_img" href="javascript:;"><img src="../img/g2.jpg"></a>
+                    <div class="goods_price">
+                        <p class="pro_name"><a href="javascript:;">清仓价：马赛兰西碧护手霜-樱花香型75ml+马鞭草香型75ml</a></p>
+                        <p class="now_price"><i>￥</i><span class="price_day">22</span>
+                            <del>￥210</del>
+                        </p>
+                        <p class="buy_btn"><a class="put-cart" href="javascript:;">加入购物车</a></p>
+                    </div>
+                </li>
+                <li>
+                    <a class="goods_img" href="javascript:;"><img src="../img/g3.jpg"></a>
+                    <div class="goods_price">
+                        <p class="pro_name"><a href="javascript:;">兰蔻光泽润养面霜\日霜15ml 兰蔻光泽润养晚霜 15ml</a></p>
+                        <p class="now_price"><i>￥</i><span class="price_day">99</span>
+                            <del>￥427</del>
+                        </p>
+                        <p class="buy_btn"><a class="put-cart" href="javascript:;">加入购物车</a></p>
+                    </div>
+                </li>
+                <li class="last">
+                    <a class="goods_img" href="javascript:;"><img src="../img/g4.jpg"></a>
+                    <div class="goods_price">
+                        <p class="pro_name"><a href="javascript:;">301研制京卫本草氨基酸洁面膏120g</a></p>
+                        <p class="now_price"><i>￥</i><span class="price_day">29</span>
+                            <del>￥69</del>
+                        </p>
+                        <p class="buy_btn"><a class="put-cart" href="javascript:;">加入购物车</a></p>
+                    </div>
+                </li>
+                <li>
+                    <a class="goods_img" href="javascript:;"><img src="../img/g5.jpg"></a>
+                    <div class="goods_price">
+                        <p class="pro_name"><a href="javascript:;">兰蔻光泽润养面霜\日霜15ml 兰蔻光泽润养晚霜 15ml</a></p>
+                        <p class="now_price"><i>￥</i><span class="price_day">99</span>
+                            <del>￥427</del>
+                        </p>
+                        <p class="buy_btn"><a class="put-cart" href="javascript:;">加入购物车</a></p>
+                    </div>
+                </li>
+                <li>
+                    <a class="goods_img" href="javascript:;"><img src="../img/g6.jpg"></a>
+                    <div class="goods_price">
+                        <p class="pro_name"><a href="javascript:;">兰蔻光泽润养面霜\日霜15ml 兰蔻光泽润养晚霜 15ml</a></p>
+                        <p class="now_price"><i>￥</i><span class="price_day">99</span>
+                            <del>￥427</del>
+                        </p>
+                        <p class="buy_btn"><a class="put-cart" href="javascript:;">加入购物车</a></p>
+                    </div>
+                </li>
+                <li>
+                    <a class="goods_img" href="javascript:;"><img src="../img/g7.jpg"></a>
+                    <div class="goods_price">
+                        <p class="pro_name"><a href="javascript:;">兰蔻光泽润养面霜\日霜15ml 兰蔻光泽润养晚霜 15ml</a></p>
+                        <p class="now_price"><i>￥</i><span class="price_day">99</span>
+                            <del>￥427</del>
+                        </p>
+                        <p class="buy_btn"><a class="put-cart" href="javascript:;">加入购物车</a></p>
+                    </div>
+                </li>
+                <li class="last">
+                    <a class="goods_img" href="javascript:;"><img src="../img/g8.jpg"></a>
+                    <div class="goods_price">
+                        <p class="pro_name"><a href="javascript:;">兰蔻光泽润养面霜\日霜15ml 兰蔻光泽润养晚霜 15ml</a></p>
+                        <p class="now_price"><i>￥</i><span class="price_day">99</span>
+                            <del>￥427</del>
+                        </p>
+                        <p class="buy_btn"><a class="put-cart" href="javascript:;">加入购物车</a></p>
+                    </div>
+                </li>
+                <li>
+                    <a class="goods_img" href="javascript:;"><img src="../img/g9.jpg"></a>
+                    <div class="goods_price">
+                        <p class="pro_name"><a href="javascript:;">兰蔻光泽润养面霜\日霜15ml 兰蔻光泽润养晚霜 15ml</a></p>
+                        <p class="now_price"><i>￥</i><span class="price_day">99</span>
+                            <del>￥427</del>
+                        </p>
+                        <p class="buy_btn"><a class="put-cart" href="javascript:;">加入购物车</a></p>
+                    </div>
+                </li>
+                <li>
+                    <a class="goods_img" href="javascript:;"><img src="../img/g10.jpg"></a>
+                    <div class="goods_price">
+                        <p class="pro_name"><a href="javascript:;">兰蔻光泽润养面霜\日霜15ml 兰蔻光泽润养晚霜 15ml</a></p>
+                        <p class="now_price"><i>￥</i><span class="price_day">99</span>
+                            <del>￥427</del>
+                        </p>
+                        <p class="buy_btn"><a class="put-cart" href="javascript:;">加入购物车</a></p>
+                    </div>
+                </li>
+                <li>
+                    <a class="goods_img" href="javascript:;"><img src="../img/g11.jpg"></a>
+                    <div class="goods_price">
+                        <p class="pro_name"><a href="javascript:;">兰蔻光泽润养面霜\日霜15ml 兰蔻光泽润养晚霜 15ml</a></p>
+                        <p class="now_price"><i>￥</i><span class="price_day">99</span>
+                            <del>￥427</del>
+                        </p>
+                        <p class="buy_btn"><a class="put-cart" href="javascript:;">加入购物车</a></p>
+                    </div>
+                </li>
+                <li class="last">
+                    <a class="goods_img" href="javascript:;"><img src="../img/g12.jpg"></a>
+                    <div class="goods_price">
+                        <p class="pro_name"><a href="javascript:;">兰蔻光泽润养面霜\日霜15ml 兰蔻光泽润养晚霜 15ml</a></p>
+                        <p class="now_price"><i>￥</i><span class="price_day">99</span>
+                            <del>￥427</del>
+                        </p>
+                        <p class="buy_btn"><a class="put-cart" href="javascript:;">加入购物车</a></p>
+                    </div>
+                </li>
+                <li>
+                    <a class="goods_img" href="javascript:;"><img src="../img/g13.jpg"></a>
+                    <div class="goods_price">
+                        <p class="pro_name"><a href="javascript:;">兰蔻光泽润养面霜\日霜15ml 兰蔻光泽润养晚霜 15ml</a></p>
+                        <p class="now_price"><i>￥</i><span class="price_day">99</span>
+                            <del>￥427</del>
+                        </p>
+                        <p class="buy_btn"><a class="put-cart" href="javascript:;">加入购物车</a></p>
+                    </div>
+                </li>
+                <li>
+                    <a class="goods_img" href="javascript:;"><img src="../img/g14.jpg"></a>
+                    <div class="goods_price">
+                        <p class="pro_name"><a href="javascript:;">兰蔻光泽润养面霜\日霜15ml 兰蔻光泽润养晚霜 15ml</a></p>
+                        <p class="now_price"><i>￥</i><span class="price_day">99</span>
+                            <del>￥427</del>
+                        </p>
+                        <p class="buy_btn"><a class="put-cart" href="javascript:;">加入购物车</a></p>
+                    </div>
+                </li>
+                <li>
+                    <a class="goods_img" href="javascript:;"><img src="../img/g15.jpg"></a>
+                    <div class="goods_price">
+                        <p class="pro_name"><a href="javascript:;">兰蔻光泽润养面霜\日霜15ml 兰蔻光泽润养晚霜 15ml</a></p>
+                        <p class="now_price"><i>￥</i><span class="price_day">99</span>
+                            <del>￥427</del>
+                        </p>
+                        <p class="buy_btn"><a class="put-cart" href="javascript:;">加入购物车</a></p>
+                    </div>
+                </li>
+                <li class="last">
+                    <a class="goods_img" href="javascript:;"><img src="../img/g16.jpg"></a>
+                    <div class="goods_price">
+                        <p class="pro_name"><a href="javascript:;">兰蔻光泽润养面霜\日霜15ml 兰蔻光泽润养晚霜 15ml</a></p>
+                        <p class="now_price"><i>￥</i><span class="price_day">99</span>
+                            <del>￥427</del>
+                        </p>
+                        <p class="buy_btn"><a class="put-cart" href="javascript:;">加入购物车</a></p>
+                    </div>
+                </li>
+
+                <li>
+                    <a class="goods_img" href="javascript:;"><img src="../img/g1.jpg"></a>
+                    <div class="goods_price">
+                        <p class="pro_name"><a href="javascript:;">英国boots小黄瓜眼霜15ml</a></p>
+                        <p class="now_price"><i>￥</i><span class="price_day">35</span>
+                            <del>￥69</del>
+                        </p>
+                        <p class="buy_btn"><a class="put-cart" href="javascript:;">加入购物车</a></p>
+                    </div>
+                </li>
+                <li>
+                    <a class="goods_img" href="javascript:;"><img src="../img/g2.jpg"></a>
+                    <div class="goods_price">
+                        <p class="pro_name"><a href="javascript:;">清仓价：马赛兰西碧护手霜-樱花香型75ml+马鞭草香型75ml</a></p>
+                        <p class="now_price"><i>￥</i><span class="price_day">22</span>
+                            <del>￥210</del>
+                        </p>
+                        <p class="buy_btn"><a class="put-cart" href="javascript:;">加入购物车</a></p>
+                    </div>
+                </li>
+                <li>
+                    <a class="goods_img" href="javascript:;"><img src="../img/g3.jpg"></a>
+                    <div class="goods_price">
+                        <p class="pro_name"><a href="javascript:;">兰蔻光泽润养面霜\日霜15ml 兰蔻光泽润养晚霜 15ml</a></p>
+                        <p class="now_price"><i>￥</i><span class="price_day">99</span>
+                            <del>￥427</del>
+                        </p>
+                        <p class="buy_btn"><a class="put-cart" href="javascript:;">加入购物车</a></p>
+                    </div>
+                </li>
+                <li class="last">
+                    <a class="goods_img" href="javascript:;"><img src="../img/g4.jpg"></a>
+                    <div class="goods_price">
+                        <p class="pro_name"><a href="javascript:;">301研制京卫本草氨基酸洁面膏120g</a></p>
+                        <p class="now_price"><i>￥</i><span class="price_day">29</span>
+                            <del>￥69</del>
+                        </p>
+                        <p class="buy_btn"><a class="put-cart" href="javascript:;">加入购物车</a></p>
+                    </div>
+                </li>
+            </ul>
+            <div class="wufeng_btn wufeng_leftbtn">&lt;</div>
+            <div class="wufeng_btn wufeng_rightbtn">&gt;</div>
+        </div>
+    </div>
+</div>
+
+
+<div id="foot">
+    <div class="foot_list w960">
+        <dl>
+            <dt>真品保证</dt>
+            <dd><a href="javascript:;">品牌合作</a></dd>
+            <dd><a href="javascript:;">严格把关</a></dd>
+            <dd><a href="javascript:;">百度投资</a></dd>
+            <dd><a href="javascript:;">全球品牌直供</a></dd>
+        </dl>
+        <dl>
+            <dt>30天包退</dt>
+            <dd><a href="javascript:;">退换货政策</a></dd>
+            <dd><a href="javascript:;">办理退换货</a></dd>
+            <dd><a href="javascript:;">售后服务</a></dd>
+        </dl>
+        <dl>
+            <dt>2件包邮</dt>
+            <dd><a href="javascript:;">配送政策</a></dd>
+            <dd><a href="javascript:;">快递查询</a></dd>
+        </dl>
+        <dl>
+            <dt>药妆专柜</dt>
+            <dd><a href="javascript:;">肤质判定</a></dd>
+            <dd><a href="javascript:;">肌肤问题</a></dd>
+            <dd><a href="javascript:;">达人推荐</a></dd>
+            <dd><a href="javascript:;">护肤常识</a></dd>
+        </dl>
+        <dl>
+            <dt>关于知我</dt>
+            <dd><a href="javascript:;">知我介绍</a></dd>
+            <dd><a href="javascript:;">商务合作</a></dd>
+            <dd><a href="javascript:;">友情链接</a></dd>
+            <dd><a href="javascript:;">开放API</a></dd>
+        </dl>
+        <dl>
+            <dt>新手指南</dt>
+            <dd><a href="javascript:;">购物流程</a></dd>
+            <dd><a href="javascript:;">支付方式</a></dd>
+            <dd><a href="javascript:;">化妆品品牌大全</a></dd>
+        </dl>
+        <dl>
+            <dt>联系方式</dt>
+            <dd><a id="online_service" href="javascript:;">在线客服咨询</a></dd>
+            <dd class="contact_method">热线</dd>
+            <dd class="contact_phone">400-630-1018</dd>
+        </dl>
+        <dl class="footer_wechat">
+            <dt>知我微信商城</dt>
+            <dd><img src="../img/saoma.jpg"></dd>
+        </dl>
+    </div>
+</div>
+<div class="footer_blue_box">
+    <ul class="w1100">
+        <li class="fcb_invest"><span>百度投资</span></li>
+        <li class="fcb_quality"><span>真品保证</span></li>
+        <li class="fcb_return"><span>30天包退</span></li>
+        <li class="fcb_mail"><span>2件包邮</span></li>
+    </ul>
+</div>
+<div class="end">
+    <div class="end_inner w1100">
+        <p class="footer_c_text1">@2011-2014 般若天成（北京）科技有限公司 zhiwo.com 保留一切权利。客服热线：400-630-1018</p>
+        <p class="footer_c_text2"><a href="javascript:;">京ICP备10047008号</a> |<a href="http://www.miibeian.gov.cn/" target="_blank" rel="nofollow">京ICP证110762号</a> | 网公安备1101054365号 | 营业执照 </p>
+        <p class="footer_c_text3">
+            <img src="../img/footer1.jpg" alt="支付宝特约商家">
+            <img src="../img/footer2.jpg" alt="快捷支付">
+            <img src="../img/footer3.jpg" alt="网上交易保障中心">
+        </p>
+    </div>
+</div>
+<a class="tanchu" href="javascript:;"><p class="close"></p></a>
+
+</body>
+</html>

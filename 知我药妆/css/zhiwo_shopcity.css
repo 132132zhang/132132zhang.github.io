@@ -1,0 +1,309 @@
+.header_mainnav_cont{
+    position: relative;
+}
+.header_mainnav_cont .duo_yu{
+    position: absolute;
+    left: 0;
+    top: 35px;
+    width: 240px;
+    height: 560px;
+    background: #fff;
+    z-index: 600;
+}
+.header_mainnav_cont .duo_yu div{
+    height: 120px;
+    padding: 15px 20px 0 20px;
+}
+.header_mainnav_cont .duo_yu a{
+    color: #6c6c6c;
+}
+.header_mainnav_cont .duo_yu dt{
+    height: 23px;
+    padding: 0 0 2px 16px;
+}
+.header_mainnav_cont .duo_yu dt a {
+    font-size: 14px;
+    color: #6c6c6c;
+    font-weight: bold;
+    float: left;
+    margin-left: 10px;
+}
+.header_mainnav_cont .duo_yu dd {
+    float: left;
+    padding-left: 15px;
+    overflow: hidden;
+}
+.header_mainnav_cont .duo_yu dd a {
+    float: left;
+    color: #6c6c6c;
+    margin: 10px 0 0 0;
+    line-height: 16px;
+}
+
+.big_box{
+    color: #6c6c6c;
+    width: 100%;
+    min-width: 1263px;
+    background: #f6f6f3;
+    padding-bottom: 35px;
+}
+.skin_adviser{
+    height: 210px;
+    overflow: hidden;
+}
+.skin_adviser #bbbox{
+    width: 835px;
+    float: right;
+}
+#bbbox h2{
+    width: 835px;
+    height: 24px;
+    font-size: 18px;
+    color:#000;
+    font-family: 微软雅黑;
+    font-weight: normal;
+    margin: 20px 0;
+}
+#bbbox h2 p{
+    float: left;
+}
+#bbbox h2 span{
+    margin-right: 10px;
+}
+.skin_sel_item span,.skin_sel_problem span{
+    font-size: 14px;
+    font-weight: bold;
+}
+.skin_sel_item {
+    width: 100%;
+    height: 35px;
+}
+.skin_sel_problem{
+    width: 835px;
+    position: relative;
+}
+.skin_sel_problem span{
+    display: inline-block;
+    height: 40px;
+}
+.duo_xuan{
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-bottom: 1px dotted #6c6c6c;
+    width: 740px;
+    height: 70px;
+
+}
+.skin_sel_item label {
+    font-size: 14px;
+    padding-left: 24px;
+    cursor: pointer;
+}
+.dan_xuan label{
+    margin:0 30px 0 30px;
+    background: url("../img/sel.png") no-repeat 0 0;
+}
+.dan_xuan .zuihou{
+    margin-right: 0;
+}
+.duo_xuan label{
+    margin:10px 25px 10px 15px;
+    line-height: 30px;
+    background: url("../img/sel.png") no-repeat 0 -40px;
+}
+.skin_quesition_btn {
+    width: 730px;
+    margin-left: 95px;
+    padding-top: 45px;
+}
+.skin_quesition_btn p {
+    float: left;
+    width: 90px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+}
+.skin_quesition_btn p a {
+    display: block;
+    width: 90px;
+    height: 26px;
+    color: #fff;
+}
+.skin_quesition_btnsave {
+    background: #00c8ff;
+    margin-right: 23px;
+}
+.skin_quesition_btnway {
+    background: #ff643c;
+}
+
+.mallfloor_list{
+    height: 569px;
+}
+.mallfloor_list img{
+    width: 100%;
+    height: 100%;
+}
+.mallfloor_left{
+    float: left;
+    width: 546px;
+}
+.mallfloor_left .p1{
+    height: 376px;
+    margin-bottom: 10px;
+}
+.mallfloor_left p:hover{
+    opacity: .9;
+    filter: alpha(opacity=90);
+}
+.mallfloor_right li:hover{
+    opacity: .9;
+    filter: alpha(opacity=90);
+}
+.mallfloor_left .p2{
+    height: 183px;
+}
+.mallfloor_right ul li{
+    float: left;
+    width: 267px;
+    height: 183px;
+    margin: 10px 0 0px 10px;
+}
+.mallfloor_right ul .wu_top{
+    margin-top:0;
+}
+.mallfloor_right ul .big_li{
+    height: 376px;
+}
+.mallfloor_right li a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+    color: #6c6c6c;
+    background: #fff;
+    overflow: hidden;
+}
+.mf_list_goodsinfo {
+    width: 96px;
+    float: left;
+    margin: 24px 0 0 14px;
+}
+.mf_list_ginfoname {
+    width: 96px;
+    height: 34px;
+    line-height: 1.5;
+    overflow: hidden;
+    margin-bottom: 6px;
+}
+.mf_list_ginfoprice {
+    font-family: 微软雅黑;
+    font-size: 14px;
+    color:#FF643C;
+}
+.mf_list_goodsimg {
+    float: right;
+    width: 150px;
+    height: 150px;
+    margin-top: 33px;
+}
+
+.mf_list_goodsimg img {
+    display: block;
+    width: 150px;
+    height: 150px;
+}
+.big_li .mf_list_goodsimg img {
+    display: block;
+    width: 267px;
+    height: 267px;
+}
+.big_li .mf_list_goodsinfo {
+    width: 170px;
+}
+.big_li .mf_list_goodsimg {
+    width: 267px;
+    height: 267px;
+    margin-top: 10px;
+}
+.footer_blue_box{
+    color: #fff;
+}
+.skin_method{
+    overflow: hidden;
+    background: #fff;
+}
+.skin_method_title {
+    float: left;
+    width: 17px;
+    height: 136px;
+    font-size: 18px;
+    font-family: 微软雅黑;
+    color:#fff;
+    line-height: 20px;
+    background:#00C8FF;
+    padding: 12px 16px 0px;
+}
+.skin_method_pro {
+    width: 786px;
+    height: 140px;
+    float: left;
+    padding-top: 5px;
+}
+.skin_method_pro li {
+    float: left;
+    padding: 0 32px 0 15px;
+    position: relative;
+    margin-right: 17px;
+}
+.skin_method_pro .skin_method_prolast{
+    margin-right: 0;
+    padding-right: 0;
+}
+.skin_method_img {
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    margin-bottom: 5px;
+}
+.skin_method_img a, .skin_method_img img {
+    display: block;
+    width: 100px;
+    height: 100px;
+}
+.skin_method_cont {
+    width: 100px;
+}
+.skin_method_line {
+    width: 1px;
+    height: 108px;
+    background: #ececec;
+    position: absolute;
+    top: 15px;
+    right: 0;
+}
+.skin_method_name {
+    width: 100px;
+    height: 34px;
+    line-height: 18px;
+    overflow: hidden;
+}
+.skin_method_name a {
+    display: block;
+    width: 100px;
+    height: 34px;
+    line-height: 18px;
+    overflow: hidden;
+    color: #6c6c6c;
+}
+.skin_adviser h2 a {
+    float: right;
+    font-size: 12px;
+    color:#6c6c6c;
+    margin:4px 0 0 0;
+    font-family: 宋体;
+    display: none;
+}
+
+

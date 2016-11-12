@@ -1,0 +1,468 @@
+
+.gg_box{
+    width: 100%;
+    background: #f6f6f3;
+    min-width: 1263px;
+    overflow: hidden;
+    padding-top: 35px;
+}
+.addressbox1,.addressbox2,.addressbox3{
+    width: 900px;
+    padding: 20px 30px 30px;
+    background: #fff;
+    margin:0 auto 5px;
+    color: #6c6c6c;
+}
+.addressbox h2{
+    margin-bottom: 18px;
+    overflow: hidden;
+}
+.addressbox h2 span{
+    width: 19px;
+    height: 19px;
+    line-height: 19px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    font-family: Arial;
+    background: url('../img/shopcar_ico.png') no-repeat 0 -53px;
+    float: left;
+    margin: 3px 9px 0 0;
+}
+.addressbox h2 em{
+    font-style: normal;
+    font-family: '微软雅黑';
+    font-weight: normal;
+    font-size: 18px;
+    color: #000;
+    float: left;
+}
+.addressbox1 i{
+    font-style: normal;
+}
+.addressbox1 select{
+    color: #6c6c6c;
+    width: 125px;
+    height: 24px;
+    line-height: 24px;
+    border: 1px #c4c4c4 solid;
+    margin-right: 10px;
+    outline: none;
+}
+.addressbox1 p{
+    height: 24px;
+    margin-top: 14px;
+}
+.addressbox1 input{
+    height: 14px;
+    line-height: 14px;
+    padding: 4px 0 4px 6px;
+    color: #6c6c6c;
+    border: 1px #c4c4c4 solid;
+}
+.addressbox1 b{
+    width: 80px;
+    height: 24px;
+    display: inline-block;
+    font-weight: normal;
+    text-align: right;
+}
+.addressbox1 .error_tip{
+    display: none;
+}
+
+.paycfm_savebtn{
+    width: 90px;
+    height: 26px;
+    background: #ff643c;
+    margin-left: 102px;
+}
+.paycfm_savebtn a{
+    color: #fff;
+    display: block;
+    width: 90px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+}
+.addressbox h2 a{
+    float: right;
+    font-size: 14px;
+    line-height: 24px;
+    color: #6c6c6c;
+    font-weight: normal;
+}
+.addressbox h2 a i{
+    font-style: normal;
+    font-family: '宋体';
+    margin-right: 4px;
+    font-size: 12px;
+}
+.addressbox2 table{
+    width: 900px;
+}
+.addressbox2 .thead{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background: #6c6c6c;
+    color: #fff;
+    border-bottom: 0;
+}
+.addressbox2 th{
+    font-weight: normal;
+}
+.paytable_name {
+    width: 510px;
+    text-align: left;
+    padding-left: 20px;
+}
+.paytable_price {
+    width: 104px;
+}
+.paytable_amonut {
+    width: 87px;
+}
+.paytable_totle {
+    width: 92px;
+}
+table{
+    border-spacing: 0;
+}
+.addressbox2 .xiang_qing {
+    border-bottom: 1px #e3e3e3 dotted;
+    height: 90px;
+    overflow: hidden;
+}
+.addressbox2{
+    position: relative;
+}
+.addressbox3{
+    overflow: auto;
+}
+.addressbox2 .a1{
+    float: left;
+}
+.addressbox2 .a2{
+    color: #6c6c6c;
+    display: block;
+    width: 380px;
+    text-align: left;
+    line-height: 30px;
+    float: left;
+    margin-left: 20px;
+}
+.paytable_pricecont, .paytable_jifencont, .paytable_totlecont,.paytable_amonutcont {
+    font-family: '微软雅黑';
+    font-size: 14px;
+    text-align: center;
+}
+.paycfm_yhwaytitle {
+    width: 120px;
+    height: 13px;
+    line-height: 13px;
+    background: url('../img/shopcar_ico.png') no-repeat 0 -178px;
+    padding-left: 22px;
+    margin: 10px 0;
+    color: #ff643c;
+    cursor: pointer;
+}
+.current {
+    background: url('../img/shopcar_ico.png') no-repeat 0 -191px;
+}
+.paycfm_txt {
+    width: 158px;
+    height: 24px;
+    line-height: 24px;
+    border: 1px #c4c4c4 solid;
+    margin-left: 22px;
+    padding-left: 6px;
+    color: #6c6c6c;
+}
+.paycfm_btn {
+    width: 71px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    background: #00c8ff;
+    color: #fff;
+    border: 0;
+    margin:0 0 10px 10px;
+    cursor: pointer;
+}
+.hide{
+    display: none;
+}
+.show{
+    display:block;
+}
+.paycfm_yue {
+    margin-top: 20px;
+}
+.paycfm_yue p span {
+    font-family: '微软雅黑';
+    color: #ff643c;
+}
+.paycfm_propaylist {
+    position: absolute;
+    right:35px;
+    bottom:20px;
+}
+.paycfm_propaylist p {
+    overflow: hidden;
+    line-height: 26px;
+}
+.paycfm_propaylist p em {
+    float: right;
+    font-style: normal;
+    font-family: '微软雅黑';
+    font-size: 14px;
+    font-weight: bold;
+    width: 120px;
+    text-align: right;
+}
+.paycfm_propaylist p span.r {
+    float: right;
+    width: 80px;
+    text-align: right;
+}
+.paycfm_propaylist p em i {
+    font-weight: normal;
+    font-style: normal;
+}
+.payonline_way dt {
+    width: 100%;
+    font-size: 16px;
+    color: #000;
+    font-family: '微软雅黑';
+    margin:15px 0 13px;
+    float: left;
+}
+.paycfm_waysel .payonline_way dd {
+    margin-right: 42px;
+    cursor: pointer;
+    float: left;
+    margin-bottom: 10px;
+}
+.payonline_way dd label {
+    float: left;
+    width: 14px;
+    height: 14px;
+    background: url('../img/sel.png') no-repeat 0 0;
+    margin: 13px 5px 0 0;
+    cursor: pointer;
+}
+.payonline_waylist {
+    width: 138px;
+    height: 38px;
+    border: 1px #c4c4c4 solid;
+    position: relative;
+    float: left;
+    cursor: pointer;
+    background: url('../img/shopcar_ico4.png') no-repeat 0 0;
+}
+.payonline_way .zhi2{
+    background-position: 0 -382px;
+}
+.payonline_way .Wcpay{
+    background-position: 0 -38px;
+}
+.payonline_way .Tenpay{
+    background-position: 0 -152px;
+}
+.payonline_way .Cmpay{
+    background-position: 0 -420px;
+}
+.payonline_way .Zhpay{
+     background-position: 0 -458px;
+}
+.payonline_way .Alipay_CMB{
+      background-position: 0 -190px;
+}
+.payonline_way .Alipay_CCB{
+    background-position: 0 -228px;
+}
+.payonline_way .Alipay_ICBCB2C{
+    background-position: 0 -266px;
+}
+.payonline_way .Alipay_BOCB2C{
+    background-position: 0 -304px;
+}
+.payonline_way .Alipay_ABC{
+     background-position: 0 -342px;
+}
+.payonline_way .Alipay_COMM{
+    background-position: 0 -494px;
+}
+.payonline_way .Alipay_PSBC-DEBIT{
+    background-position: 0 -532px;
+}
+.payonline_way .Alipay_CITIC{
+    background-position: 0 -570px;
+}
+.payonline_way .Alipay_CIB{
+    background-position: 0 -608px;
+}
+.payonline_way .Alipay_SPDB{
+    background-position: 0 -646px;
+}
+.payonline_way .Alipay_CMBC{
+    background-position: 0 -684px;
+}
+.payonline_way .Alipay_CEBBANK{
+    background-position: 0 -722px;
+}
+.payonline_way .Alipay_NBBANK{
+    background-position: 0 -760px;
+}
+.payonline_way .Alipay_SDB{
+    background-position: 0 -798px;
+}
+.payonline_way .Alipay_BJRCB{
+    background-position: 0 -836px;
+}
+.payonline_way .Alipay_SPABANK{
+     background-position: 0 -874px;
+}
+.payonline_way .Alipay_GDB{
+    background-position: 0 -912px;
+}
+
+
+
+.payonline_waylist i {
+    width: 22px;
+    height: 22px;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    /*display: none;*/
+}
+.payonline_terrace_more{
+    width: 872px;
+    height: 40px;
+}
+
+.payonline_way .paycfm_itemtotle i {
+    font-size: 14px;
+    color: #ff643c;
+    background: url('../img/shopcar_ico.png') no-repeat 0 -132px;
+}
+.payonline_way .paycfm_itemtotle em {
+    font-size: 22px;
+    color: #ff643c;
+    font-weight: normal;
+}
+.payonline_way .paycfm_itemtotle label{
+    background-position: 0 -20px;
+}
+.payonline_way .paycfm_itemtotle .payonline_waylist{
+    border: 1px #ff643c solid;
+}
+
+.paymore_btn {
+    width: 138px;
+    height: 38px;
+    border: 1px #22c9fc solid;
+    cursor: pointer;
+    line-height: 38px;
+    text-align: center;
+    font-size: 12px;
+    margin-left: 19px;
+    position: relative;
+}
+.paymore_btn i{
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 23px;
+    height: 23px;
+    background: url('../img/shopcar_ico.png') no-repeat 0 -350px;
+}
+
+
+
+.payonline_waylist span {
+    display: block;
+    width: 27px;
+    height: 14px;
+    background: #ff643c;
+    color: #fff;
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    text-align: center;
+}
+.paycfm_beizhutip {
+    width: 490px;
+    float: left;
+}
+#remarks_ {
+    width: 480px;
+    height: 14px;
+    border: 1px #c4c4c4 solid;
+    margin-top: 10px;
+    color: #6c6c6c;
+    padding: 4px 10px;
+    line-height: 14px;
+}
+.paycfm_contbox .payonline_gobox {
+    width: 370px;
+    float: right;
+    padding: 0;
+    margin: 0;
+}
+.payonline_gobox p {
+    text-align: right;
+    overflow: hidden;
+}
+.paycfm_contbox .payonline_gobox .payonline_gopaybtn {
+    margin-right: 0;
+}
+.payonline_gopaybtn {
+    width: 126px;
+    height: 45px;
+    line-height: 45px;
+    float: right;
+    color:#fff;
+    text-align: center;
+    font-family: 微软雅黑;
+    font-size: 24px;
+    margin-left: 22px;
+    background:#FF643C;
+}
+.payonline_gobox p span {
+    float: right;
+    margin-top: 3px;
+}
+.payonline_gobox p i {
+    color: #ff643c;
+    font-family: '微软雅黑';
+    font-size: 20px;
+    font-style: normal;
+}
+.payonline_gobox p em {
+    color: #ff643c;
+    font-style: normal;
+    font-family: Arial;
+    font-size: 36px;
+}
+
+.di_qu{
+    display: inline-block;
+    height: 24px;
+}
+.addressbox1 div{
+    line-height: 30px;
+    margin-top: 14px;
+}
+
+
+
+
+
+
+
+
