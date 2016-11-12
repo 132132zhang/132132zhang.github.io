@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>影片</title>
+<style>
+
+html, body {
+	height: 80%;
+}
+
+body {
+	background-color: #000000;
+	margin: 0;
+	font-family: Helvetica, sans-serif;;
+	overflow: hidden;
+}
+img{
+	width: 120px;
+	height: 160px;
+	vertical-align: bottom;
+}
+a {
+	color: #ffffff;
+}
+
+#info {
+	position: absolute;
+	width: 100%;
+	color: #ffffff;
+	padding: 5px;
+	font-family: Monospace;
+	font-size: 13px;
+	font-weight: bold;
+	text-align: center;
+	z-index: 1;
+}
+
+#menu {
+	position: absolute;
+	bottom: 20px;
+	width: 100%;
+	text-align: center;
+	font-family: verdana,Tahoma,Arial,Hei,"Microsoft Yahei",SimHei;
+}
+
+.element {
+	width: 120px;
+	height: 160px;
+	box-shadow: 0px 0px 12px rgba(0,255,255,0.5);
+	border: 1px solid rgba(127,255,255,0.25);
+	text-align: center;
+	cursor: default;
+}
+
+.element:hover {
+	box-shadow: 0px 0px 12px rgba(0,255,255,0.75);
+	border: 1px solid rgba(127,255,255,0.75);
+}
+
+	
+
+	.element .symbol {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		right: 0px;
+		font-size: 60px;
+		font-weight: bold;
+		color: rgba(255,255,255,0.75);
+		text-shadow: 0 0 10px rgba(0,255,255,0.95);
+	}
+	
+
+	/*.element .details {
+		position: absolute;
+		bottom: 15px;
+		left: 0px;
+		right: 0px;
+		font-size: 12px;
+		color: rgba(127,255,255,0.75);
+	}*/
+
+button {
+	color: rgba(127,255,255,0.75);
+	background: transparent;
+	outline: 1px solid rgba(127,255,255,0.75);
+	border: 0px;
+	padding: 5px 10px;
+	cursor: pointer;
+}
+button:hover {
+	background-color: rgba(0,255,255,0.5);
+}
+button:active {
+	color: #000000;
+	background-color: rgba(0,255,255,0.75);
+}
+</style>
+</head>
+<body>
+<script src="js/three.min.js" ></script>
+<script src="js/tween.min.js" ></script>
+<script src="js/TrackballControls.js" ></script>
+<script src="js/CSS3DRenderer.js" ></script>
+
+<div id="container"></div>
+<div id="menu">
+<button id="table">Plane</button>
+<button id="sphere">Sphere</button>
+<button id="helix">Screw</button>
+<button id="grid">Grid</button>
+</div>
+
+<script>
+
+var table = [
+	"img/1.jpg", "", "1.00794", 1, 1,
+	"img/2.jpg", "", "4.002602", 18, 1,
+	"img/3.jpg", "", "#6.941", 1, 2,
+	"img/4.jpg", "", "9.012182", 2, 2,
+	"img/5.jpg", "", "#10.811", 13, 2,
+	"img/6.jpg", "", "#12.0107", 14, 2,
+	"img/7.jpg", "", "#14.0067", 15, 2,
+	"img/8.jpg", "", "#15.9994", 16, 2,
+	"img/9.jpg", "", "18.9984032", 17, 2,
+	"img/10.jpg", "", "#20.1797", 18, 2,
+	"img/11.jpg", "", "22.98976...", 1, 3,
+	"img/12.jpg", "", "#24.305", 2, 3,
+	"img/13.jpg", "", "26.9815386", 13, 3,
+	"img/14.jpg", "", "#28.0855", 14, 3,
+	"img/15.jpg", "", "30.973762", 15, 3,
+	"img/16.jpg", "", "#32.065", 16, 3,
+	"img/17.jpg", "", "#35.453", 17, 3,
+	"img/18.jpg", "", "#39.948", 18, 3,
+	"img/19.jpg", "", "#39.948", 1, 4,
+	"img/20.jpg", "", "#40.078", 2, 4,
+	"img/21.jpg", "", "44.955912", 3, 4,
+	"img/22.jpg", "", "#47.867", 4, 4,
+	"img/23.jpg", "", "#50.9415", 5, 4,
+	"img/24.jpg", "", "#51.9961", 6, 4,
+	"img/25.jpg", "", "54.938045", 7, 4,
+	"img/26.jpg", "", "#55.845", 8, 4,
+	"img/27.jpg", "", "58.933195", 9, 4,
+	"img/28.jpg", "", "#58.6934", 10, 4,
+	"img/29.jpg", "", "#63.546", 11, 4,
+	"img/30.jpg", "", "#65.38", 12, 4,
+	"img/31.jpg", "", "#69.723", 13, 4,
+	"img/32.jpg", "", "#72.63", 14, 4,
+	"img/33.jpg", "", "#74.9216", 15, 4,
+	"img/34.jpg", "", "#78.96", 16, 4,
+	"img/35.jpg", "", "#79.904", 17, 4,
+	"img/36.jpg", "", "#83.798", 18, 4,
+	"img/37.jpg", "", "#85.4678", 1, 5,
+	"img/38.jpg", "", "#87.62", 2, 5,
+	"img/39.jpg", "", "88.90585", 3, 5,
+	"img/40.jpg", "", "#91.224", 4, 5,
+	"img/41.jpg", "", "92.90628", 5, 5,
+	"img/42.jpg", "", "#95.96", 6, 5,
+	"img/43.jpg", "", "(98)", 7, 5,
+	"img/44.jpg", "", "#101.07", 8, 5,
+	"img/45.jpg", "", "#102.9055", 9, 5,
+	"img/46.jpg", "", "#106.42", 10, 5,
+	"img/47.jpg", "", "#107.8682", 11, 5,
+	"img/48.jpg", "", "#112.411", 12, 5,
+	"img/49.jpg", "", "#114.818", 13, 5,
+	"img/50.jpg", "", "#118.71", 14, 5,
+	"img/51.jpg", "", "#121.76", 15, 5,
+	"img/52.jpg", "", "127.6", 16, 5,
+	"img/53.jpg", "", "126.90447", 17, 5,
+	"img/54.jpg", "", "#131.293", 18, 5,
+	"img/55.jpg", "", "#132.9054", 1, 6,
+	"img/56.jpg", "", "#132.9054", 2, 6,
+	"img/57.jpg", "", "138.90547", 4, 9,
+	"img/58.jpg", "", "#140.116", 5, 9,
+	"img/59.jpg", "", "140.90765", 6, 9,
+	"img/60.jpg", "", "#144.242", 7, 9,
+	"img/61.jpg", "", "(145)", 8, 9,
+	"img/62.jpg", "", "#150.36", 9, 9,
+	"img/63.jpg", "", "#151.964", 10, 9,
+	"img/64.jpg", "", "#157.25", 11, 9,
+	"img/65.jpg", "", "158.92535", 12, 9,
+	"img/66.jpg", "", "162.5", 13, 9,
+	"img/67.jpg", "", "164.93032", 14, 9,
+	"img/68.jpg", "", "#167.259", 15, 9,
+	"img/69.jpg", "", "168.93421", 16, 9,
+	"img/70.jpg", "", "#173.054", 17, 9,
+	"img/71.jpg", "", "#174.9668", 18, 9,
+	"img/72.jpg", "", "#178.49", 4, 6,
+	"img/73.jpg", "", "180.94788", 5, 6,
+	"img/74.jpg", "", "#183.84", 6, 6,
+	"img/75.jpg", "", "#186.207", 7, 6,
+	"img/76.jpg", "", "#190.23", 8, 6,
+	"img/77.jpg", "", "#192.217", 9, 6,
+	"img/78.jpg", "", "#195.084", 10, 6,
+	"img/79.jpg", "", "196.966569", 11, 6,
+	"img/80.jpg", "", "#200.59", 12, 6,
+	"img/81.jpg", "", "#204.3833", 13, 6,
+	"img/82.jpg", "", "207.2", 14, 6,
+	"img/83.jpg", "", "#208.9804", 15, 6,
+	"img/84.jpg", "", "(209)", 16, 6,
+	"img/85.jpg", "", "(210)", 17, 6,
+	"img/86.jpg", "", "(222)", 18, 6,
+	"img/87.jpg", "", "(223)", 1, 7,
+	"img/88.jpg", "", "(226)", 2, 7,
+	"img/89.jpg", "", "(227)", 4, 10,
+	"img/90.jpg", "", "232.03806", 5, 10,
+	"img/91.jpg", "", "#231.0588", 6, 10,
+	"img/92.jpg", "", "238.02891", 7, 10,
+	"img/93.jpg", "", "(237)", 8, 10,
+	"img/94.jpg", "", "(244)", 9, 10,
+	"img/95.jpg", "", "(243)", 10, 10,
+	"img/96.jpg", "", "(247)", 11, 10,
+	"img/97.jpg", "", "(247)", 12, 10,
+	"img/98.jpg", "", "(251)", 13, 10,
+	"img/99.jpg", "", "(252)", 14, 10,
+	"img/100.jpg", "", "(257)", 15, 10,
+	"img/101.jpg", "", "(258)", 16, 10,
+	"img/102.jpg", "", "(259)", 17, 10,
+	"img/103.jpg", "", "(262)", 18, 10,
+	"img/104.jpg", "", "(267)", 4, 7,
+	"img/105.jpg", "", "(268)", 5, 7,
+	"img/106.jpg", "", "(271)", 6, 7,
+	"img/107.jpg", "", "(272)", 7, 7,
+	"img/108.jpg", "", "(270)", 8, 7,
+	"img/109.jpg", "", "(276)", 9, 7,
+	"img/110.jpg", "", "(281)", 10, 7,
+	"img/111.jpg", "", "(280)", 11, 7,
+	"img/112.jpg", "", "(285)", 12, 7,
+	"img/113.jpg", "", "(284)", 13, 7,
+	"img/114.jpg", "", "(289)", 14, 7,
+	"img/115.jpg", "", "(288)", 15, 7,
+	"img/116.jpg", "", "(293)", 16, 7,
+	"img/117.jpg", "", "(294)", 17, 7,
+	"img/118.jpg", "", "(294)", 18, 7
+];
+
+var camera, scene, renderer;
+var controls;
+
+var objects = [];
+var targets = { table: [], sphere: [], helix: [], grid: [] };
+
+init();
+animate();
+
+function init() {
+
+	camera = new THREE.PerspectiveCamera( 40, window.innerWidth / window.innerHeight, 1, 10000 );
+	camera.position.z = 3000;
+
+	scene = new THREE.Scene();
+
+
+	// table
+
+	for ( var i = 0; i < table.length; i += 5 ) {
+
+		var element = document.createElement( 'div' );
+		element.className = 'element';
+		element.style.backgroundColor = 'rgba(0,127,127,' + ( Math.random() * 0.5 + 0.25 ) + ')';
+
+//		var number = document.createElement( 'div' );
+//		number.className = 'number';
+//		number.textContent = (i/5) + 1;
+//		element.appendChild( number );
+
+		var symbol = document.createElement( 'div' );
+		symbol.className = 'symbol';
+		var img = document.createElement( 'img' );
+		img.src = table[ i ];
+		symbol.appendChild( img );
+		element.appendChild( symbol );
+
+//		var details = document.createElement( 'div' );
+//		details.className = 'details';
+//		details.innerHTML = table[ i + 1 ] + '<br>' + table[ i + 2 ];
+//		element.appendChild( details );
+
+		var object = new THREE.CSS3DObject( element );
+		object.position.x = Math.random() * 4000 - 2000;
+		object.position.y = Math.random() * 4000 - 2000;
+		object.position.z = Math.random() * 4000 - 2000;
+		scene.add( object );
+
+		objects.push( object );
+
+		//
+
+		var object = new THREE.Object3D();
+		object.position.x = ( table[ i + 3 ] * 140 ) - 1330;
+		object.position.y = - ( table[ i + 4 ] * 180 ) + 990;
+
+		targets.table.push( object );
+
+	}
+
+	// sphere
+
+	var vector = new THREE.Vector3();
+
+	for ( var i = 0, l = objects.length; i < l; i ++ ) {
+
+		var phi = Math.acos( -1 + ( 2 * i ) / l );
+		var theta = Math.sqrt( l * Math.PI ) * phi;
+
+		var object = new THREE.Object3D();
+
+		object.position.x = 800 * Math.cos( theta ) * Math.sin( phi );
+		object.position.y = 800 * Math.sin( theta ) * Math.sin( phi );
+		object.position.z = 800 * Math.cos( phi );
+
+		vector.copy( object.position ).multiplyScalar( 2 );
+
+		object.lookAt( vector );
+
+		targets.sphere.push( object );
+
+	}
+
+	// helix
+
+	var vector = new THREE.Vector3();
+
+	for ( var i = 0, l = objects.length; i < l; i ++ ) {
+
+		var phi = i * 0.175 + Math.PI;
+
+		var object = new THREE.Object3D();
+
+		object.position.x = 900 * Math.sin( phi );
+		object.position.y = - ( i * 8 ) + 450;
+		object.position.z = 900 * Math.cos( phi );
+
+		vector.x = object.position.x * 2;
+		vector.y = object.position.y;
+		vector.z = object.position.z * 2;
+
+		object.lookAt( vector );
+
+		targets.helix.push( object );
+
+	}
+
+	// grid
+
+	for ( var i = 0; i < objects.length; i ++ ) {
+
+		var object = new THREE.Object3D();
+
+		object.position.x = ( ( i % 5 ) * 400 ) - 800;
+		object.position.y = ( - ( Math.floor( i / 5 ) % 5 ) * 400 ) + 800;
+		object.position.z = ( Math.floor( i / 25 ) ) * 1000 - 2000;
+
+		targets.grid.push( object );
+
+	}
+
+	//
+
+	renderer = new THREE.CSS3DRenderer();
+	renderer.setSize( window.innerWidth, window.innerHeight );
+	renderer.domElement.style.position = 'absolute';
+	document.getElementById( 'container' ).appendChild( renderer.domElement );
+
+	//
+
+	controls = new THREE.TrackballControls( camera, renderer.domElement );
+	controls.rotateSpeed = 0.5;
+	controls.minDistance = 500;
+	controls.maxDistance = 6000;
+	controls.addEventListener( 'change', render );
+
+	var button = document.getElementById( 'table' );
+	button.addEventListener( 'click', function ( event ) {
+
+		transform( targets.table, 2000 );
+
+	}, false );
+
+	var button = document.getElementById( 'sphere' );
+	button.addEventListener( 'click', function ( event ) {
+
+		transform( targets.sphere, 2000 );
+
+	}, false );
+
+	var button = document.getElementById( 'helix' );
+	button.addEventListener( 'click', function ( event ) {
+
+		transform( targets.helix, 2000 );
+
+	}, false );
+
+	var button = document.getElementById( 'grid' );
+	button.addEventListener( 'click', function ( event ) {
+
+		transform( targets.grid, 2000 );
+
+	}, false );
+
+	transform( targets.table, 5000 );
+
+	//
+
+	window.addEventListener( 'resize', onWindowResize, false );
+
+}
+
+function transform( targets, duration ) {
+
+	TWEEN.removeAll();
+
+	for ( var i = 0; i < objects.length; i ++ ) {
+
+		var object = objects[ i ];
+		var target = targets[ i ];
+
+		new TWEEN.Tween( object.position )
+			.to( { x: target.position.x, y: target.position.y, z: target.position.z }, Math.random() * duration + duration )
+			.easing( TWEEN.Easing.Exponential.InOut )
+			.start();
+
+		new TWEEN.Tween( object.rotation )
+			.to( { x: target.rotation.x, y: target.rotation.y, z: target.rotation.z }, Math.random() * duration + duration )
+			.easing( TWEEN.Easing.Exponential.InOut )
+			.start();
+
+	}
+
+	new TWEEN.Tween( this )
+		.to( {}, duration * 2 )
+		.onUpdate( render )
+		.start();
+
+}
+
+function onWindowResize() {
+
+	camera.aspect = window.innerWidth / window.innerHeight;
+	camera.updateProjectionMatrix();
+
+	renderer.setSize( window.innerWidth, window.innerHeight );
+
+	render();
+
+}
+
+function animate() {
+
+	requestAnimationFrame( animate );
+
+	TWEEN.update();
+
+	controls.update();
+
+}
+
+function render() {
+
+	renderer.render( scene, camera );
+
+}
+
+
+
+</script>
+<script src="../js/jQuery.js"></script>
+<script>
+
+	$("#container .element").click(function(){
+		location.href="../xiangqing/html/xiangqing.html"
+	})
+</script>
+</body>
+</html>

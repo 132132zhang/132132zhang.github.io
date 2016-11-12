@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jQuery.js"></script>
+    <script src="js/jquery.roundabout.js"></script>
+    <script src="http://libs.baidu.com/html5shiv/3.7/html5shiv.min.js"></script>
+    <script src="js/history.js"></script>
+    <script src="js/jquery.easing.js"></script>
+    <script src="js/jquery.mousewheel.js"></script>
+    <script src="js/index2.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/history.css">
+
+</head>
+<body>
+<div id="main">
+    <div id="head">
+        <div id="header">
+            <div class="logo">
+                <img src="images/logo.jpg" alt="">
+            </div>
+            <div class="logo-text">
+                <img src="images/text.png" alt="">
+            </div>
+            <div class="nav">
+                <ul class="menu">
+                    <li><a href="javascript:;">首页</a>
+                        <ul class="submenu">
+                            <li><a href="javascript:;">正在上映</a></li>
+                            <li><a href="javascript:;">即将上映</a></li>
+                            <li><a href="javascript:;">票房排行</a></li>
+                            <li><a href="javascript:;">观影指南</a></li>
+                            <li><a href="javascript:;">限量周边</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index2.html">影片</a>
+                        <ul class="submenu">
+                            <li><a href="javascript:;">大陆</a></li>
+                            <li><a href="javascript:;">港台</a></li>
+                            <li><a href="javascript:;">欧美</a></li>
+                            <li><a href="javascript:;">日韩</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="entrance-wrap">
+                <ul class="entrance">
+                    <li class="entrance-item">
+                        <a class="fcode  " href="javascript:;" target="_blank" >兑换券兑换</a>
+                    </li>
+                    <li class="entrance-item">
+                        <a class="phone  " href="javascript:;" target="_blank" >手机购买</a>
+                    </li>
+                    <li class="entrance-item">
+                        <a class="service" href="javascript:;">客服咨询</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <article class="jq22-container">
+
+        <div class = "caroursel poster-main" data-setting = '{
+	        "width":1100,
+	        "height":350,
+	        "posterWidth":640,
+	        "posterHeight":350,
+	        "scale":0.8,
+	        "dealy":"2000",
+	        "algin":"middle"
+	    }'>
+            <ul class = "poster-list">
+                <li class = "poster-item"><img src="images/banner1.jpg" width = "100%" height="100%"></li>
+                <li class = "poster-item"><img src="images/banner2.jpg" width = "100%" height="100%"></li>
+                <li class = "poster-item"><img src="images/banner3.jpg" width = "100%" height="100%"></li>
+                <li class = "poster-item"><img src="images/banner4.jpg" width = "100%" height="100%"></li>
+                <li class = "poster-item"><img src="images/banner5.jpg" width = "100%" height="100%"></li>
+                <li class = "poster-item"><img src="images/banner6.jpg"  width = "100%" height="100%"></li>
+                <li class = "poster-item"><img src="images/banner7.jpg"  width = "100%" height="100%"></li>
+            </ul>
+
+
+            <div class = "poster-btn poster-prev-btn"></div>
+            <div class = "poster-btn poster-next-btn"></div>
+
+        </div>
+
+    </article>
+    <div id="show-film">
+        <div class="move-title">
+            <a class="move-first just-move" href="javascript:;">正在热映</a>
+            <a class="soon-move" href="javascript:;">即将上映</a>
+            <a class="check-all" target="_blank" href="index2.html">查看全部</a>
+        </div>
+    </div>
+    <div class="tab-content clearfix">
+        <div class="tab-movie-list" style="display: block;">
+            <div class="movie-card-wrap" onclick="dianji()">
+                <a href="javascript:;" class="movie-card">
+                    <div class="movie-card-tag"><i class="t-"></i></div>
+                    <div class="movie-card-poster">
+                        <img width="160" height="224" src="">
+                    </div>
+                    <div class="movie-card-name">
+                        <span class="bt-l"></span>
+                        <span class="bt-r"></span>
+                    </div>
+                    <div class="movie-card-info">
+                        <div class="movie-card-mask"></div>
+                        <div class="movie-card-list">
+                            <span class="direct">导演：</span>
+                            <span class="movie-main">主演：</span>
+                            <span class="type">类型：</span>
+                            <span class="area">地区：</span>
+                            <span class="language">语言：</span>
+                            <span class="timelong">片长：</span>                        </div>
+                    </div>
+                </a>
+                <a href="../seat/index.html" class="movie-card-buy">选座购票</a>
+            </div>
+            <div class="movie-card-wrap">
+                <a href="javascript:;" class="movie-card">
+                    <div class="movie-card-tag"><i class="t-"></i></div>
+                    <div class="movie-card-poster">
+                        <img width="160" height="224" src="">
+                    </div>
+                    <div class="movie-card-name">
+                        <span class="bt-l"></span>
+                        <span class="bt-r"></span>
+                    </div>
+                    <div class="movie-card-info">
+                        <div class="movie-card-mask"></div>
+                        <div class="movie-card-list">
+                            <span class="direct">导演：</span>
+                            <span class="movie-main">主演：</span>
+                            <span class="type">类型：</span>
+                            <span class="area">地区：</span>
+                            <span class="language">语言：</span>
+                            <span class="timelong">片长：</span>                        </div>
+                    </div>
+                </a>
+                <a href="../seat/index.html" class="movie-card-buy">选座购票</a>
+            </div>
+            <div class="movie-card-wrap">
+                <a href="javascript:;" class="movie-card">
+                    <div class="movie-card-tag"><i class="t-8"></i></div>
+                    <div class="movie-card-poster">
+                        <img width="160" height="224" src="">
+                    </div>
+                    <div class="movie-card-name">
+                        <span class="bt-l"></span>
+                        <span class="bt-r"></span>
+                    </div>
+                    <div class="movie-card-info">
+                        <div class="movie-card-mask"></div>
+                        <div class="movie-card-list">
+                            <span class="direct">导演：</span>
+                            <span class="movie-main">主演：</span>
+                            <span class="type">类型：</span>
+                            <span class="area">地区：</span>
+                            <span class="language">语言：</span>
+                            <span class="timelong">片长：</span>                        </div>
+                    </div>
+                </a>
+                <a href="../seat/index.html" class="movie-card-buy">选座购票</a>
+            </div>
+            <div class="movie-card-wrap">
+                <a href="javascript:;" class="movie-card">
+                    <div class="movie-card-tag"><i class="t-201"></i></div>
+                    <div class="movie-card-poster">
+                        <img width="160" height="224" src="">
+                    </div>
+                    <div class="movie-card-name">
+                        <span class="bt-l"></span>
+                        <span class="bt-r"></span>
+                    </div>
+                    <div class="movie-card-info">
+                        <div class="movie-card-mask"></div>
+                        <div class="movie-card-list">
+                            <span class="direct">导演：</span>
+                            <span class="movie-main">主演：</span>
+                            <span class="type">类型：</span>
+                            <span class="area">地区：</span>
+                            <span class="language">语言：</span>
+                            <span class="timelong">片长：</span>                         </div>
+                    </div>
+                </a>
+                <a href="../seat/index.html" class="movie-card-buy">选座购票</a>
+            </div>
+            <div class="movie-card-wrap1">
+                <a href="javascript:;" class="movie-card">
+                    <div class="movie-card-tag"><i class="t-"></i></div>
+                    <div class="movie-card-poster">
+                        <img width="160" height="224" src="">
+                    </div>
+                    <div class="movie-card-name">
+                        <span class="bt-l"></span>
+                        <span class="bt-r"></span>
+                    </div>
+                    <div class="movie-card-info">
+                        <div class="movie-card-mask"></div>
+                        <div class="movie-card-list">
+                            <span class="direct">导演：</span>
+                            <span class="movie-main">主演：</span>
+                            <span class="type">类型：</span>
+                            <span class="area">地区：</span>
+                            <span class="language">语言：</span>
+                            <span class="timelong">片长：</span>                         </div>
+                    </div>
+                </a>
+                <a href="../seat/index.html" class="movie-card-buy">选座购票</a>
+            </div>
+        </div>
+        <div class="tab-movie-list2" style="display: none;">
+            <div class="movie-card-wrap">
+                <a href="javascript:;" class="movie-card">
+                    <div class="movie-card-tag"><i class="t-"></i></div>
+                    <div class="movie-card-poster">
+                        <img width="160" height="224" src="">
+                    </div>
+                    <div class="movie-card-name">
+                        <span class="bt-l"></span>
+                        <span class="bt-r"></span>
+                    </div>
+                    <div class="movie-card-info">
+                        <div class="movie-card-mask"></div>
+                        <div class="movie-card-list">
+                            <span class="direct">导演：</span>
+                            <span class="movie-main">主演：</span>
+                            <span class="type">类型：</span>
+                            <span class="area">地区：</span>
+                            <span class="language">语言：</span>
+                            <span class="timelong">片长：</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="javascript:;" class="movie-card-soon">上映时间</a>
+            </div>
+            <div class="movie-card-wrap">
+                <a href="javascript:;" class="movie-card">
+                    <div class="movie-card-tag"><i class="t-"></i></div>
+                    <div class="movie-card-poster">
+                        <img width="160" height="224" src="">
+                    </div>
+                    <div class="movie-card-name">
+                        <span class="bt-l"></span>
+                        <span class="bt-r"></span>
+                    </div>
+                    <div class="movie-card-info">
+                        <div class="movie-card-mask"></div>
+                        <div class="movie-card-list">
+                            <span class="direct">导演：</span>
+                            <span class="movie-main">主演：</span>
+                            <span class="type">类型：</span>
+                            <span class="area">地区：</span>
+                            <span class="language">语言：</span>
+                            <span class="timelong">片长：</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="javascript:;" class="movie-card-soon">上映时间</a>
+            </div>
+            <div class="movie-card-wrap">
+                <a href="javascript:;" class="movie-card" data-spm-anchor-id="a1z21.3046609.w2.18">
+                    <div class="movie-card-tag"><i class="t-"></i></div>
+                    <div class="movie-card-poster">
+                        <img width="160" height="224" src="">
+                    </div>
+                    <div class="movie-card-name">
+                        <span class="bt-l"></span>
+                        <span class="bt-r"></span>
+                    </div>
+                    <div class="movie-card-info">
+                        <div class="movie-card-mask"></div>
+                        <div class="movie-card-list">
+                            <span class="direct">导演：</span>
+                            <span class="movie-main">主演：</span>
+                            <span class="type">类型：</span>
+                            <span class="area">地区：</span>
+                            <span class="language">语言：</span>
+                            <span class="timelong">片长：</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="javascript:;" class="movie-card-soon">上映时间</a>
+            </div>
+            <div class="movie-card-wrap">
+                <a href="javascript:;" class="movie-card">
+                    <div class="movie-card-tag"><i class="t-"></i></div>
+                    <div class="movie-card-poster">
+                        <img width="160" height="224" src="">
+                    </div>
+                    <div class="movie-card-name">
+                        <span class="bt-l"></span>
+                        <span class="bt-r"></span>
+                    </div>
+                    <div class="movie-card-info">
+                        <div class="movie-card-mask"></div>
+                        <div class="movie-card-list">
+                            <span class="direct">导演：</span>
+                            <span class="movie-main">主演：</span>
+                            <span class="type">类型：</span>
+                            <span class="area">地区：</span>
+                            <span class="language">语言：</span>
+                            <span class="timelong">片长：</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="javascript:;" class="movie-card-soon">上映时间</a>
+            </div>
+            <div class="movie-card-wrap1">
+                <a href="javascript:;" class="movie-card">
+                    <div class="movie-card-tag"><i class="t-"></i></div>
+                    <div class="movie-card-poster">
+                        <img width="160" height="224" src="">
+                    </div>
+                    <div class="movie-card-name">
+                        <span class="bt-l"></span>
+                        <span class="bt-r"></span>
+                    </div>
+                    <div class="movie-card-info">
+                        <div class="movie-card-mask"></div>
+                        <div class="movie-card-list">
+                            <span class="direct">导演：</span>
+                            <span class="movie-main">主演：</span>
+                            <span class="type">类型：</span>
+                            <span class="area">地区：</span>
+                            <span class="language">语言：</span>
+                            <span class="timelong">片长：</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="javascript:;" class="movie-card-soon">上映时间2016-10-14</a>
+            </div>
+        </div>
+    </div>
+    <div class="process-wrap"></div>
+    <div class="center-wrap clearfix">
+        <div class="home-toplist-item">
+            <div class="movie-weeklist">
+                <h5><span>上周票房排行</span><a href="javascript:;" class="more">全部影片&nbsp;&gt;</a></h5>
+                <ul class="weeklist">
+                    <li class="">
+                        <i class="i-1"></i>
+                        <span class="poster"><a href="javascript:;"><img width="120" height="90" src="images/top1.jpg"></a></span>
+                        <a href="javascript:;" class="name">湄公河行动</a>
+                        <span class="rating">9.3</span>
+                        <span class="buynow"><a href="../seat/index.html" class="buy">选座购票</a></span>
+                    </li>
+                    <li class="">
+                        <i class="i-2"></i>
+                        <span class="poster"><a href="javascript:;"><img width="120" height="90" src="images/top2.jpg"></a></span>
+                        <a href="javascript:;" class="name">从你的全世界路过</a>
+                        <span class="rating">8.9</span>
+                        <span class="buynow"><a href="../seat/index.html" class="buy">选座购票</a></span>
+                    </li>
+                    <li class="">
+                        <i class="i-3"></i>
+                        <span class="poster"><a href="javascript:;"><img width="120" height="90" src="images/top3.jpg"></a></span>
+                        <a href="javascript:;" class="name">爵迹</a>
+                        <span class="rating">8.0</span>
+                        <span class="buynow"><a href="../seat/index.html" class="buy">选座购票</a></span>
+                    </li>
+                    <li class="">
+                        <i class="i-4"></i>
+                        <span class="poster"><a href="javascript:;"><img width="120" height="90" src="images/top4.jpg"></a></span>
+                        <a href="javascript:;" class="name">王牌逗王牌</a>
+                        <span class="rating">7.7</span>
+                        <span class="buynow"><a href="../seat/index.html" class="buy">选座购票</a></span>
+                    </li>
+                    <li class="current">
+                        <i class="i-5"></i>
+                        <span class="poster"><a href="javascript:;"><img width="120" height="90" src="images/top5.jpg"></a></span>
+                        <a href="javascript:;" class="name">鲁滨逊漂流记</a>
+                        <span class="rating">8.0</span>
+                        <span class="buynow"><a href="../seat/index.html" class="buy">选座购票</a></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="home-toplist-item">
+            <div class="movie-weeklist">
+                <h5><span>最受期待排行</span><a href="javascript:;" class="more">全部影片&nbsp;&gt;</a></h5>
+                <ul class="weeklist2">
+                    <li class="">
+                        <i class="i-1"></i>
+                        <span class="poster2"><a href="javascript:;"><img width="120" height="90" src="images/top6.jpg"></a></span>
+                        <a href="javascript:;" class="name2">三生三世十里桃花</a>
+                        <span class="want-watch">15万人想看</span>
+                        <span class="performer"><a href="javascript:;" class="actor">主演：刘亦菲，杨洋</a></span>
+                    </li>
+                    <li class="">
+                        <i class="i-2"></i>
+                        <span class="poster2"><a href="javascript:;"><img width="120" height="90" src="images/top7.jpg"></a></span>
+                        <a href="javascript:;" class="name2">敢问路在何方</a>
+                        <span class="want-watch">13万人想看</span>
+                        <span class="performer"><a href="javascript:;" class="actor">主演：刘德华，六小龄童</a></span>
+                    </li>
+                    <li class="">
+                        <i class="i-3"></i>
+                        <span class="poster2"><a href="javascript:;"><img width="120" height="90" src="images/top8.jpg"></a></span>
+                        <a href="javascript:;" class="name2">奇异博士</a>
+                        <span class="want-watch">11万人想看</span>
+                        <span class="performer"><a href="javascript:;" class="actor">主演：本尼迪克特·康伯巴奇、切瓦特·埃加福特</a></span>
+                    </li>
+                    <li class="">
+                        <i class="i-4"></i>
+                        <span class="poster2"><a href="javascript:;"><img width="120" height="90" src="images/top9.jpg"></a></span>
+                        <a href="javascript:;" class="name2">长城</a>
+                        <span class="want-watch">8万人想看</span>
+                        <span class="performer"><a href="javascript:;" class="actor">主演：张涵予，刘德华</a></span>
+                    </li>
+                    <li class="current">
+                        <i class="i-5"></i>
+                        <span class="poster2"><a href="javascript:;"><img width="120" height="90" src="images/top10.jpg"></a></span>
+                        <a href="javascript:;" class="name2">我不是潘金莲</a>
+                        <span class="want-watch">7万人想看</span>
+                        <span class="performer"><a href="javascript:;" class="actor">主演：范冰冰，郭涛</a></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="home-toplist-item">
+            <div class="movie-weeklist">
+                <h5><span>袋鼠TOP100</span><a href="javascript:;" class="more">全部影片&nbsp;&gt;</a></h5>
+                <ul class="weeklist3">
+                    <li class="">
+                        <i class="i-1"></i>
+                        <span class="poster3"><a href="javascript:;"><img width="120" height="90" src="images/top11.jpg"></a></span>
+                        <a href="javascript:;" class="name3">肖申克的救赎</a>
+                        <span class="rating2">9.6</span>
+                        <span class="performer2"><a href="javascript:;" class="actor2">主演：蒂姆·罗宾斯、摩根·弗里曼</a></span>
+                    </li>
+                    <li class="">
+                        <i class="i-2"></i>
+                        <span class="poster3"><a href="javascript:;"><img width="120" height="90" src="images/top12.jpg"></a></span>
+                        <a href="javascript:;" class="name3">霸王别姬</a>
+                        <span class="rating2">9.6</span>
+                        <span class="performer2"><a href="javascript:;" class="actor2">主演：张国荣，巩俐</a></span>
+                    </li>
+                    <li class="">
+                        <i class="i-3"></i>
+                        <span class="poster3"><a href="javascript:;"><img width="120" height="90" src="images/top13.jpg"></a></span>
+                        <a href="javascript:;" class="name3">这个杀手不太冷</a>
+                        <span class="rating2">9.5</span>
+                        <span class="performer2"><a href="javascript:;" class="actor2">主演：让·雷诺、盖瑞·欧德曼</a></span>
+                    </li>
+                    <li class="">
+                        <i class="i-4"></i>
+                        <span class="poster3"><a href="javascript:;"><img width="120" height="90" src="images/top14.jpg"></a></span>
+                        <a href="javascript:;" class="name3">阿甘正传</a>
+                        <span class="rating2">9.4</span>
+                        <span class="performer2"><a href="javascript:;" class="actor2">主演：汤姆·汉克斯、罗宾·怀特</a></span>
+                    </li>
+                    <li class="current">
+                        <i class="i-5"></i>
+                        <span class="poster3"><a href="javascript:;"><img width="120" height="90" src="images/top15.jpg"></a></span>
+                        <a href="javascript:;" class="name3">泰坦尼克号</a>
+                        <span class="rating2">9.3</span>
+                        <span class="performer2"><a href="javascript:;" class="actor2">主演：莱昂纳多·迪卡普里奥、凯特·温斯莱特</a></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="center-guide clearfix">
+        <div class="move-guide">
+            <h3 class="movie-guide-info">新片观影指南</h3>
+        </div>
+
+    <div id="arrow">
+        <ul>
+            <li class="arrowup"></li>
+            <li class="arrowdown"></li>
+        </ul>
+    </div>
+
+    <div id="history">
+
+        <div class="title">
+            <h2>十月上映</h2>
+            <div id="circle">
+                <div class="cmsk"></div>
+                <div class="circlecontent">
+                    <div thisyear="2013" class="timeblock">
+                        <span class="numf"></span>
+                        <span class="nums"></span>
+                        <span class="numt"></span>
+                        <span class="numfo"></span>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="timeyear">YEAR</div>
+                </div>
+                <a href="#" class="clock"></a>
+            </div>
+        </div>
+
+        <div id="content">
+            <ul class="list">
+                <li style="margin-top:-110px;">
+                    <div class="liwrap">
+                        <div class="lileft">
+                            <div class="date">
+                                <span class="year">10月</span>
+                                <span class="md">09</span>
+                            </div>
+                        </div>
+
+                        <div class="point"><b></b></div>
+
+                        <div class="liright">
+                            <div class="histt"><img src="images/time1.jpg" alt=""></div>
+                            <div class="hisct">
+                                <h3 onselectstart="return false">那年我对你的承诺</h3>
+                                <h4 onselectstart="return false">主演：严晓频,张京生</h4>
+                                <h5 onselectstart="return false">北大荒知青，生纯洁爱情</h5>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="liwrap">
+                        <div class="lileft">
+                            <div class="date">
+                                <span class="year">10月</span>
+                                <span class="md">10日</span>
+                            </div>
+                        </div>
+
+                        <div class="point"><b></b></div>
+
+                        <div class="liright">
+                            <div class="histt"><img src="images/time2.jpg" alt=""></div>
+                            <div class="hisct">
+                                <h3 onselectstart="return false">宾虚</h3>
+                                <h4 onselectstart="return false">主演：摩根·弗里曼,托比·凯贝尔,杰克·休斯顿,纳赞宁·波妮阿蒂</h4>
+                                <h5 onselectstart="return false">决裂同年友，回乡为复仇</h5>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="liwrap">
+                        <div class="lileft">
+                            <div class="date">
+                                <span class="year">10月</span>
+                                <span class="md">14日</span>
+                            </div>
+                        </div>
+
+                        <div class="point"><b></b></div>
+
+                        <div class="liright">
+                            <div class="histt"><img src="images/time3.jpg" alt=""></div>
+                            <div class="hisct">
+                                <h3 onselectstart="return false">T台魔王</h3>
+                                <h4 onselectstart="return false">主演：班嘉佳,朱研,肖宗灵</h4>
+                                <h5 onselectstart="return false">超模退役成魔王，满满福利</h5>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="liwrap">
+
+                        <div class="lileft">
+                            <div class="date">
+                                <span class="year">10月</span>
+                                <span class="md">20日</span>
+                            </div>
+                        </div>
+
+                        <div class="point"><b></b></div>
+
+                        <div class="liright">
+                            <div class="histt"><img src="images/time4.jpg" alt=""></div>
+                            <div class="hisct">
+                                <h3 onselectstart="return false">驴得水</h3>
+                                <h4 onselectstart="return false">主演：任素汐,阿如那,大力,裴魁山</h4>
+                                <h5 onselectstart="return false">开心麻花第二部，再讲个笑话</h5>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="liwrap">
+                        <div class="lileft">
+                            <div class="date">
+                                <span class="year">10月</span>
+                                <span class="md">21日</span>
+                            </div>
+                        </div>
+
+                        <div class="point"><b></b></div>
+
+                        <div class="liright">
+                            <div class="histt"><img src="images/time5.jpg" alt=""></div>
+                            <div class="hisct">
+                                <h3 onselectstart="return false">夺路而逃</h3>
+                                <h4 onselectstart="return false">主演：张一山,朴河宣,何云伟,李菁</h4>
+                                <h5 onselectstart="return false">张一山跨时空撩妹，山河CP有爱</h5>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="liwrap">
+                        <div class="lileft">
+                            <div class="date">
+                                <span class="year">10月</span>
+                                <span class="md">28日</span>
+                            </div>
+                        </div>
+
+                        <div class="point"><b></b></div>
+
+                        <div class="liright">
+                            <div class="histt"><img src="images/time6.jpg" alt=""></div>
+                            <div class="hisct">
+                                <h3 onselectstart="return false">不离不弃</h3>
+                                <h4 onselectstart="return false">主演：袁成杰 曹云金 江若琳 </h4>
+                                <h5 onselectstart="return false">认真搞笑，不作不死</h5>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="liwrap">
+
+                        <div class="lileft">
+                            <div class="date">
+                                <span class="year">10月</span>
+                                <span class="md">31日</span>
+                            </div>
+                        </div>
+
+                        <div class="point"><b></b></div>
+
+                        <div class="liright">
+                            <div class="histt"><img src="images/time7.jpg" alt=""></div>
+                            <div class="hisct">
+                                <h3 onselectstart="return false">聊斋新编之画皮新娘</h3>
+                                <h4 onselectstart="return false">主演：丁汇宇 殷果儿 徐千京 </h4>
+                                <h5 onselectstart="return false">聊斋新演绎，人妖不两立</h5>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+        <div class="cooperation">
+            <h3 class="cooperation-cinema">合作院线</h3>
+        </div>
+        <ul class="cinema-img">
+            <li><img src="images/cinema1.png" alt=""><p class="cinema-name">上海国际影城</p></li>
+            <li><img src="images/cinema2.png" alt=""><p class="cinema-name">UME国际影城</p></li>
+            <li style="margin-right: 0"><img src="images/cinema3.png" alt=""><p class="cinema-name">金逸院线</p></li>
+            <li><img src="images/cinema4.png" alt=""><p class="cinema-name">华谊兄弟影院</p></li>
+            <li><img src="images/cinema5.png" alt=""><p class="cinema-name">博纳国际影城</p></li>
+            <li style="margin-right: 0"><img src="images/cinema6.png" alt=""><p class="cinema-name">金典院线</p></li>
+            <li><img src="images/cinema7.png" alt=""></li>
+
+
+        </ul>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="footer clearfix">
+        <div class="footWrap">
+            <div class="footMiddle">
+                <div class="footLogo">
+                    <img src="images/text.jpg">
+                    <span>客服热线</span>
+                    <span>0571-88157838</span>
+                </div>
+                <dl>
+                    <dt>选座购票流程</dt>
+                    <dd><a href="javascript:;" target="_blank" title="选择影片和场次">选择影片和场次</a></dd>
+                    <dd><a href="javascript:;" target="_blank" title="选择中意的座位">选择中意的座位</a></dd>
+                    <dd><a href="javascript:;" target="_blank" title="支付并收到取票短信">支付并收到取票短信</a></dd>
+                </dl>
+                <dl>
+                    <dt>取票流程</dt>
+                    <dd><a href="javascript:;" target="_blank" title="收到取票短信">收到取票短信</a></dd>
+                    <dd><a href="javascript:;" target="_blank" title="影院自助取票">影院自助取票</a></dd>
+                    <dd><a href="javascript:;" target="_blank" title="短信重发方式">短信重发方式</a></dd>
+                </dl>
+                <dl>
+                    <dt>常见问题</dt>
+                    <dd><a href="javascript:;" target="_blank" title="是否支持退换票">是否支持退换票</a></dd>
+                    <dd><a href="javascript:;" target="_blank" title="填错手机号怎么办">填错手机号怎么办</a></dd>
+                    <dd><a href="javascript:;" target="_blank" title="更多问题>>">更多问题&gt;&gt;</a></dd>
+                </dl>
+                <dl>
+                    <dt>协议规范</dt>
+                    <dd><a href="javascript:;" target="_blank" title="用户服务协议">用户服务协议</a></dd>
+                    <dd><a href="javascript:;" target="_blank" title="食品管理规范">食品管理规范</a></dd>
+                </dl>
+                <div class="order-code"></div>
+            </div>
+            <div class="footBottom">
+                <img class="img" src="images/logo.jpg">
+                <div class="footer-ali">
+                    <a href="javascript:;">袋鼠集团</a>
+                    <b>|</b>
+                    <a href="javascript:;">袋鼠国际站</a>
+                    <b>|</b>
+                    <a href="javascript:;">袋鼠中国站</a>
+                    <b>|</b>
+                    <a href="javascript:;">全球速卖通</a>
+                    <b>|</b>
+                    <a href="javascript:;">淘宝网</a>
+                    <b>|</b>
+                    <a href="javascript:;">天猫</a>
+                    <b>|</b>
+                    <a href="javascript:;">聚划算</a>
+                    <b>|</b>
+                    <a href="javascript:;">一淘</a>
+                    <b>|</b>
+                    <a href="javascript:;">袋鼠妈妈</a>
+                    <b>|</b>
+                    <a href="javascript:;">袋鼠计算</a>
+                    <b>|</b>
+                    <a href="javascript:;">云OS</a>
+                    <b>|</b>
+                    <a href="javascript:;">万网</a>
+                    <b>|</b>
+                    <a href="javascript:;">中国雅虎</a>
+                    <b>|</b>
+                    <a href="javascript:;">支付宝</a>
+                </div>
+                <div class="foot-nav">
+                    <a href="javascript:;">关于袋鼠</a>
+                    <a href="javascript:;">合作伙伴</a>
+                    <a href="javascript:;">营销中心</a>
+                    <a href="javascript:;">联系客服</a>
+                    <a href="javascript:;">开放平台</a>
+                    <a href="javascript:;">诚征英才</a>
+                    <a href="javascript:;">联系我们</a>
+                    <a href="javascript:;">网站地图</a>
+                    <a href="javascript:;">法律声明</a>
+                    <span>© 2016 ZZ-HTML-1609.com 版权所有</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+    <script>
+    $(function(){
+    	 Caroursel.init($('.caroursel'))
+        function dianji(){
+        	location.href="../xiangqing/html/xiangqing.html"
+        }
+    })
+       
+        
+    </script>
+</div>
+</body>
+</html>
