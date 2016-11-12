@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>袋鼠电影</title>
     <script src="js/jQuery.js"></script>
     <script src="js/jquery.roundabout.js"></script>
-    <script src="http://libs.baidu.com/html5shiv/3.7/html5shiv.min.js"></script>
     <script src="js/history.js"></script>
     <script src="js/jquery.easing.js"></script>
     <script src="js/jquery.mousewheel.js"></script>
@@ -29,7 +28,6 @@
                     <li><a href="javascript:;">首页</a>
                         <ul class="submenu">
                             <li><a href="javascript:;">正在上映</a></li>
-                            <li><a href="javascript:;">即将上映</a></li>
                             <li><a href="javascript:;">票房排行</a></li>
                             <li><a href="javascript:;">观影指南</a></li>
                             <li><a href="javascript:;">限量周边</a></li>
@@ -97,7 +95,7 @@
     </div>
     <div class="tab-content clearfix">
         <div class="tab-movie-list" style="display: block;">
-            <div class="movie-card-wrap" onclick="dianji()">
+            <div class="movie-card-wrap">
                 <a href="javascript:;" class="movie-card">
                     <div class="movie-card-tag"><i class="t-"></i></div>
                     <div class="movie-card-poster">
@@ -782,10 +780,7 @@
     <script src="js/index.js"></script>
     <script>
     $(function(){
-    	 Caroursel.init($('.caroursel'))
-        function dianji(){
-        	location.href="../xiangqing/html/xiangqing.html"
-        }
+    	 Caroursel.init($('.caroursel'));
     })
        
         

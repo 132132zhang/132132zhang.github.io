@@ -3,34 +3,50 @@
  */
 (function ($) {
     $(function () {
+    	
         $.get("../move1.txt",function(data){
             var data1=eval(data);
-            $(".cont-title").append(data1[0].movie+"<i>"+data1[0].English+"</i><em class='score'>"+ data1[0].gate+"</em>")
-            $(".cont-pic img").attr("src",data1[0].src)
-            $(".detail-bg img").attr("src",data1[0].bg)
-            $(".comment").append("<em class='quot'>“</em>"+data1[0].title+"<em class='quotend'>&nbsp;”</em>")
-            $(".direct").text("导演："+data1[0].direct)
-            $(".main").text("主演："+data1[0].main)
-            $(".type").text("类型："+data1[0].type)
-            $(".area").text("制片国家/地区："+data1[0].area)
-            $(".language").text("语言："+data1[0].language)
-            $(".timelong").text("片长："+data1[0].timelong)
-            $(".cont-time").text("上映时间："+data1[0].uptime)
-            $(".cont-view .t1 img").attr("src",data1[0].t1)
-            $(".cont-view .t2 img").attr("src",data1[0].t2)
-            $(".shrink").append("剧情介绍："+data1[0].introduce+"<a class='shrink-btn' href='javascript:;'>展开>></a>")
+            
+            console.log(data1);
+			
+			var index = getCookie("index");
+			
+			console.log(index);
+
+
+            $(".cont-title").append(data1[index].movie+"<i>"+data1[index].English+"</i><em class='score'>"+ data1[index].gate+"</em>")
+            $(".cont-pic img").attr("src",data1[index].src)
+            $(".comment").append("<em class='quot'>“</em>"+data1[index].title+"<em class='quotend'>&nbsp;”</em>")
+            $(".direct").text("导演："+data1[index].direct)
+            $(".main").text("主演："+data1[index].main)
+            $(".type").text("类型："+data1[index].type)
+            $(".area").text("制片国家/地区："+data1[index].area)
+            $(".language").text("语言："+data1[index].language)
+            $(".timelong").text("片长："+data1[index].timelong)
+            $(".cont-time").text("上映时间："+data1[index].uptime)
+            $(".cont-view .t1 img").attr("src",data1[index].t1)
+            $(".cont-view .t2 img").attr("src",data1[index].t2)
+            $(".shrink").append("剧情介绍："+data1[index].introduce+"<a class='shrink-btn' href='javascript:;'>展开>></a>")
 
             $(".shrink-btn").click(function () {
                 $(".cont-info .shrink").css({height: "100"});
-                $(".shrink").text("剧情介绍："+data1[0].longintroduce);
+                $(".shrink").text("剧情介绍："+data1[index].longintroduce);
                 $(".shrink").append('<a class="shrink-btn" href="javascript:;">收起<<</a>')
                 $(".shrink-btn").click(function () {
                     $(".cont-info .shrink").css({height: "40"});
-                    $(".shrink").text("剧情介绍："+data1[0].introduce);
+                    $(".shrink").text("剧情介绍："+data1[index].introduce);
                     $(".shrink").append('<a class="shrink-btn" href="javascript:;">展开>></a>')
                 })
             })
         })
+        
+        //获得点击的数据
+        
+        /*var oDetailIfo = $(".movie-card-info");
+        
+        console.log(oDetailIfo.length);*/
+        
+        
 
 
 
@@ -119,10 +135,58 @@
                 $(".more1").text('全部');
             }
         })
+$(".J_moviesList li").click(function(){
+			index=$(this).index();
+			$.get("../move1.txt",function(data){
+            var data1=eval(data);
+            $(".cont-title").html(data1[index].movie+"<i>"+data1[index].English+"</i><em class='score'>"+ data1[index].gate+"</em>")
+            $(".cont-pic img").attr("src",data1[index].src)
+            $(".detail-bg img").attr("src",data1[index].bg)
+            $(".comment").html("<em class='quot'>“</em>"+data1[index].title+"<em class='quotend'>&nbsp;”</em>")
+            $(".direct").text("导演："+data1[index].direct)
+            $(".main").text("主演："+data1[index].main)
+            $(".type").text("类型："+data1[index].type)
+            $(".area").text("制片国家/地区："+data1[index].area)
+            $(".language").text("语言："+data1[index].language)
+            $(".timelong").text("片长："+data1[index].timelong)
+            $(".cont-time").text("上映时间："+data1[index].uptime)
+            $(".cont-view .t1 img").attr("src",data1[index].t1)
+            $(".cont-view .t2 img").attr("src",data1[index].t2)
+            $(".shrink").html("剧情介绍："+data1[index].introduce+"<a class='shrink-btn' href='javascript:;'>展开>></a>")
 
+            $(".shrink-btn").click(function () {
+                $(".cont-info .shrink").css({height: "100"});
+                $(".shrink").text("剧情介绍："+data1[index].longintroduce);
+                $(".shrink").append('<a class="shrink-btn" href="javascript:;">收起<<</a>')
+                $(".shrink-btn").click(function () {
+                    $(".cont-info .shrink").css({height: "40"});
+                    $(".shrink").text("剧情介绍："+data1[index].introduce);
+                    $(".shrink").append('<a class="shrink-btn" href="javascript:;">展开>></a>')
+                })
+            })
+        })
+	})
 
 
 
 
     })
 })(jQuery);
+
+
+function setCookie(name,value,expires,path){
+    var odate=new Date();
+    odate.setDate(odate.getDate()+expires);
+    document.cookie=name+"="+decodeURIComponent(value)+";expires="+odate+";path="+path;
+}
+
+function getCookie(name){
+    /*console.log(decodeURIComponent(document.cookie));*/
+    var aCookie=document.cookie.split("; ");
+    for(var i=0;i<aCookie.length;i++){
+        var aTemp=aCookie[i].split("=");
+        if(aTemp[0]===name){
+            return decodeURIComponent(aTemp[1]);
+        }
+    }
+}

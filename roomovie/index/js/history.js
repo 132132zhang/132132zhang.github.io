@@ -100,6 +100,7 @@ $(function(){
 				var d=parseInt($(".list li:first").css("marginTop"));
 				0<c?0!=d&&($(".arrowup").addClass("arrow_active"),$(".arrowup").trigger("click")):d>-110*h&&($(".arrowdown").addClass("arrow_active"),$(".arrowdown").trigger("click"))
 			}
+			b.preventDefault();
 		});
 		$(".timeblock").attr("thisyear",c);
 		$(".list li:gt("+(row-1)+")").find(".lileft").css({left:"-400px"});

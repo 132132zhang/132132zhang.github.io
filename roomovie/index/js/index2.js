@@ -70,7 +70,6 @@ $(function(){
     $.get("move1.txt",function(data){
         var arr = eval(data);
         $.each(arr,function(i,v){
-            console.log(v);
             $(".bt-l").each(function(a){
                 $(".bt-l").eq(a).text(arr[a].movie)
             })

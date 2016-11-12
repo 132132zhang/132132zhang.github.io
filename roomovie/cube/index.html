@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="page-enter" content="revealtrans(duration=4,transition=23),duration=4" />
+		<meta http-equiv="page-exit" content="revealtrans(duration=4,transition=23),duration=4" />
+		<title>袋鼠电影</title>
+		<script src="js/jquery.js"></script>
+		<link rel="stylesheet" href="css/style.css">
+		<script src="js/script.js"></script>
+		<script>
+			$(function() {
+				var m = 0;
+				var n = 0;
+				var b = 0;
+				var time = null;
+				var timer = null;
+				item();
+				$(".box div").click(function() {
+					var i = $(this).index();
+					clearInterval(time);
+					clearTimeout(timer);
+					if(i == 0) {
+
+						$(".cube").css({
+							transform: "rotateX(" + 0 + "deg) rotateY(" + 0 + "deg) rotateZ(" + 0 + "deg)"
+						})
+						$("body").css({
+							perspective: "800px"
+						})
+						m = 0;
+						n = 0;
+						b = 0;
+					}
+					if(i == 1) {
+						$(".cube").css({
+							transform: "rotateX(" + 0 + "deg) rotateY(" + (-90) + "deg) rotateZ(" + 0 + "deg)"
+						})
+						$("body").css({
+							perspective: "800px"
+						})
+						m = 0;
+						n = -90;
+						b = 0;
+					}
+					if(i == 2) {
+						$(".cube").css({
+							transform: "rotateX(" + 0 + "deg) rotateY(" + (-180) + "deg) rotateZ(" + 0 + "deg)"
+						})
+						$("body").css({
+							perspective: "800px"
+						})
+						m = 0;
+						n = -180;
+						b = 0;
+					}
+					if(i == 3) {
+						$(".cube").css({
+							transform: "rotateX(" + 0 + "deg) rotateY(" + (-270) + "deg) rotateZ(" + 0 + "deg)"
+						})
+						$("body").css({
+							perspective: "800px"
+						})
+						m = 0;
+						n = -270;
+						b = 0;
+					}
+					if(i == 4) {
+						$(".cube").css({
+							transform: "rotateX(" + (-90) + "deg) rotateY(" + 0 + "deg) rotateZ(" + 0 + "deg)"
+						})
+						$("body").css({
+							perspective: "800px"
+						})
+						m = -90;
+						n = 0;
+						b = 0;
+					}
+					if(i == 5) {
+						$(".cube").css({
+							transform: "rotateX(" + 90 + "deg) rotateY(" + 0 + "deg) rotateZ(" + 0 + "deg)"
+						})
+						$("body").css({
+							perspective: "800px"
+						})
+						m = 90;
+						n = 0;
+						b = 0;
+					}
+					timer = setTimeout(function() {
+						$("body").css({
+							perspective: "2000px"
+						})
+
+						item();
+					}, 5000)
+
+				})
+
+				function item() {
+					time = setInterval(function() {
+						m += 10;
+						if(m > 360) {
+							m -= 10;
+						}
+
+						n += 10;
+						if(n > 360) {
+							n -= 10;
+						}
+						b += 10;
+						if(b > 360) {
+							b -= 10;
+						}
+						$(".cube").css({
+							transform: "rotateX(" + m + "deg) rotateY(" + n + "deg) rotateZ(" + b + "deg)"
+						})
+					}, 2000)
+				}
+				
+				$(".cube").click(function(){
+					location.href="../index/index.html"
+				})
+			})
+		</script>
+		<style>
+			body {
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				padding: 0;
+				perspective: 2000px;
+				position: relative;
+				transform-origin: 50% 50%;
+				transition: all 2s linear;
+			}
+			
+			img {
+				width: 300px;
+				height: 300px;
+			}
+			
+			.box a:hover {
+				animation: neon1 1.5s ease-in-out infinite alternate;
+			}
+			
+			@-webkit-keyframes neon1 {
+				from {
+					text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #B6FF00, 0 0 70px #B6FF00, 0 0 80px #B6FF00, 0 0 100px #B6FF00, 0 0 150px #B6FF00;
+				}
+				to {
+					text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #B6FF00, 0 0 35px #B6FF00, 0 0 40px #B6FF00, 0 0 50px #B6FF00, 0 0 75px #B6FF00;
+				}
+			}
+			
+			.cube {
+				position: absolute;
+				z-index: 999;
+				top: 250px;
+				left: 500px;
+				font-size: 80px;
+				width: 300px;
+				height: 300px;
+				transform-style: preserve-3d;
+				transform-origin: center center 100px;
+				transition: all 2s linear;
+				transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+			}
+			
+			.cube> div {
+				box-shadow: 0 0 3rem .5rem hsla(140, 80%, 80%, 1);
+				position: absolute;
+				width: 300px;
+				height: 300px;
+				border: 1px solid #999;
+				color: white;
+				text-align: center;
+				line-height: 300px;
+			}
+			
+			.front {
+				background: white;
+				transform: translateZ(300px) rotateY(0deg);
+				transform-origin: top;
+				transition: all 2s linear;
+			}
+			
+			.top {
+				background: white;
+				transform: rotateX(90deg);
+				transform-origin: top;
+			}
+			
+			.right {
+				background: white;
+				transform: rotateY(90deg);
+				transform-origin: right;
+			}
+			
+			.left {
+				background: white;
+				transform: rotateY(-90deg);
+				transform-origin: left;
+			}
+			
+			.bottom {
+				background: white;
+				transform: rotateX(-90deg);
+				transform-origin: bottom;
+			}
+			
+			.back {
+				background: white;
+				transform: rotateY(180deg);
+			}
+			
+			.container {
+				position: fixed;
+				top: 0;
+				left: 0;
+				z-index: -1;
+			}
+		</style>
+	</head>
+
+	<body style="background: url(img/back.jpg);">
+		<div class="box">
+			<div class="link mission-link">
+				<a class="button" onselectstart="return false">
+					<span class="line line-top"></span>
+					<span class="line line-right"></span>
+					<span class="line line-bottom"></span>
+					<span class="line line-left"></span> One
+				</a>
+			</div>
+			<div class="link play-link">
+				<a class="button" onselectstart="return false">
+					<span class="line line-top"></span>
+					<span class="line line-right"></span>
+					<span class="line line-bottom"></span>
+					<span class="line line-left"></span> Two
+				</a>
+			</div>
+			<div class="link touch-link">
+				<a class="button" onselectstart="return false">
+					<span class="line line-top"></span>
+					<span class="line line-right"></span>
+					<span class="line line-bottom"></span>
+					<span class="line line-left"></span> Three
+				</a>
+			</div>
+			<div class="link touch-link">
+				<a class="button" onselectstart="return false">
+					<span class="line line-top"></span>
+					<span class="line line-right"></span>
+					<span class="line line-bottom"></span>
+					<span class="line line-left"></span> Four
+				</a>
+			</div>
+			<div class="link touch-link">
+				<a class="button" onselectstart="return false">
+					<span class="line line-top"></span>
+					<span class="line line-right"></span>
+					<span class="line line-bottom"></span>
+					<span class="line line-left"></span> Five
+				</a>
+			</div>
+			<div class="link touch-link">
+				<a class="button" onselectstart="return false">
+					<span class="line line-top"></span>
+					<span class="line line-right"></span>
+					<span class="line line-bottom"></span>
+					<span class="line line-left"></span> Six
+				</a>
+			</div>
+		</div>
+		<div class="cube">
+			<div class="front"><img src="img/logo.jpg"></div>
+			<div class="back"><img src="img/logo.jpg"></div>
+			<div class="right"><img src="img/logo.jpg"></div>
+			<div class="left"><img src="img/logo.jpg"></div>
+			<div class="top"><img src="img/logo.jpg"></div>
+			<div class="bottom"><img src="img/logo.jpg"></div>
+		</div>
+	</body>
+
+</html>

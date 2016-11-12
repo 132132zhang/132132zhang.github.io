@@ -187,4 +187,36 @@
         })  ;
     };
     window["Caroursel"] = Caroursel;
+    
+    var oDetailIfo = $(".movie-card-info");
+    
+    console.log(oDetailIfo.length);
+    
+    oDetailIfo.click(function(){
+    	var iIndex = oDetailIfo.index($(this));
+    	
+    	setCookie("index",iIndex,7,"/")
+    	window.location.assign("../xiangqing/html/xiangqing.html");
+    	
+    });
+        
+        
 })(jQuery)
+
+
+function setCookie(name,value,expires,path){
+    var odate=new Date();
+    odate.setDate(odate.getDate()+expires);
+    document.cookie=name+"="+decodeURIComponent(value)+";expires="+odate+";path="+path;
+}
+
+function getCookie(name){
+    /*console.log(decodeURIComponent(document.cookie));*/
+    var aCookie=document.cookie.split("; ");
+    for(var i=0;i<aCookie.length;i++){
+        var aTemp=aCookie[i].split("=");
+        if(aTemp[0]===name){
+            return decodeURIComponent(atemp[1]);
+        }
+    }
+}

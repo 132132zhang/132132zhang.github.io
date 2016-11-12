@@ -7,7 +7,6 @@ body,div,ul,li,h1,h2,h3,h4,h5,h6,p,ol,dl,dd,dt{
     font-size: 12px;
     color: #333;
     font-family: "Microsoft YaHei", 微软雅黑, "MicrosoftJhengHei", 华文细黑, STHeiti, MingLiu;
-    /*overflow: auto;*/
 }
 img{
     border: 0;
@@ -21,6 +20,7 @@ img{
 }
 #head{
     width:100%;
+    min-width: 1263px;
     background: #2b2b2b;
 }
 #header{
@@ -62,6 +62,7 @@ a{
 
 /*restCSS结束，应用特效时，以上样式可删除*/
 /* 需要的css样式 */
+
 .nav {
     width: 500px;
     float: left;
@@ -80,7 +81,6 @@ a{
 
 .menu li {
     background-color: #2b2b2b;
-    /*border-top: 2px solid #fee3b6;*/
     min-width: 160px;
 }
 
@@ -106,15 +106,7 @@ a{
 }
 
 .menu li:hover {
-    /*background-color: #f05e73;
-    background: -moz-linear-gradient(#f05e73, #f05e73);
-    background: -ms-linear-gradient(#f05e73, #f05e73);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f05e73), color-stop(100%, #f05e73));
-    background: -webkit-linear-gradient(#f05e73, #f05e73);
-    background: -o-linear-gradient(#f05e73, #f05e73);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1c1c1c', endColorstr='#1b1b1b');
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#1c1c1c', endColorstr='#1b1b1b')";
-    background: linear-gradient(#f05e73, #f05e73);*/
+    
     color: #fff;
 }
 
@@ -322,10 +314,10 @@ a{
     color: #666;
 }
 .entrance li .fcode{
-    background: url("../images/fcode.png") no-repeat 0 10px;
+    background: url("../images/fcode.png") no-repeat 0 13px;
 }
 .entrance li .phone{
-    background: url("../images/phone.png") no-repeat 0 10px;
+    background: url("../images/phone.png") no-repeat 0 13px;
 }
 .entrance li .service{
     background: url("../images/service.png") no-repeat 0 15px;
