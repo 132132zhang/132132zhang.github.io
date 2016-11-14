@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>分类</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" href="../css/swiper-3.3.1.min.css">
+		<link rel="stylesheet" href="../css/hah.css">
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/swiper-3.3.1.jquery.min.js"></script>
+		<style type="text/css">
+			@font-face {
+				font-family: 'iconfont';
+				src: url('../font/iconfont.eot');
+			    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+				url('../font/iconfont.woff') format('woff'),
+				url('../font/iconfont.ttf') format('truetype'),
+				url('../font/iconfont.svg#iconfont') format('svg');
+			}
+			.iconfont{
+				font-family:"iconfont" !important;
+				font-size:16px;font-style:normal;
+				-webkit-font-smoothing: antialiased;
+				-webkit-text-stroke-width: 0.2px;
+				-moz-osx-font-smoothing: grayscale;
+			}
+			.swiper-slide{
+				font-size: 0.24rem;
+			}
+			#swiper-container2 {
+				width: 100%;
+				overflow: hidden;
+				height: 0.57rem;
+				background: #9a9fa5;
+				padding: 0 0.2rem;
+				box-sizing: border-box;
+			}
+			#swiper-container2 .swiper-slide{
+				width: 0.7rem;
+				text-align: center;
+				font-size: 0.3rem;
+				line-height: 0.57rem;
+			}
+			#swiper-container2 .swiper-slide-active{
+				color: #fff;
+				background: url("../img/sanjiao.png") no-repeat bottom center;
+			}
+			#swiper-container2 .active-nav{
+				color: #fff;
+				background: url("../img/sanjiao.png") no-repeat bottom center;
+			}
+			#swiper-container3 {
+				height: 100%;
+				overflow-y: scroll;
+			}
+			#swiper-container3 ul li{
+				float: left;
+				width: 50%;
+				height: 3.68rem;
+				padding: 0.4rem 0.35rem 0;
+				box-sizing: border-box;
+			}
+			#swiper-container3 ul li img{
+				width: 2.44rem;
+				height: 2.47rem;
+				border: 1px solid #ABABAB; 
+			}
+			.red{
+				color: red;
+			}
+			.left{
+				float: left;
+			}
+			.right{
+				float: right;
+			}
+			i{
+				font-style: normal;
+			}
+			.one{
+				width: 100%;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				height: 0.5rem;
+				line-height: 0.5rem;
+			}
+		</style>
+	</head>
+
+<body>
+	<div class="contain">
+		<div id="head"><img src="../img/back.png">
+				<p>ZXIU 走秀网</p>
+		</div>
+		<div class="swiper-container" id="swiper-container2">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide iconfont">&#xe62e;</div>
+					<div class="swiper-slide iconfont">&#xe664;</div>
+					<div class="swiper-slide iconfont">&#xe67d;</div>
+					<div class="swiper-slide iconfont">&#xe60e;</div>
+					<div class="swiper-slide iconfont">&#xe613;</div>
+					<div class="swiper-slide iconfont">&#xe684;</div>
+					<div class="swiper-slide iconfont">&#xe682;</div>
+					<div class="swiper-slide iconfont">&#xe670;</div>
+					<div class="swiper-slide iconfont">&#xe60c;</div>
+					<div class="swiper-slide iconfont">&#xe612;</div>				
+				</div>
+		</div>
+		<div class="move">
+			<div class="swiper-container" id="swiper-container3">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><ul></ul></div>
+					<div class="swiper-slide"><ul></ul></div>
+					<div class="swiper-slide"><ul></ul></div>
+					<div class="swiper-slide"><ul></ul></div>
+					<div class="swiper-slide"><ul></ul></div>
+					<div class="swiper-slide"><ul></ul></div>
+					<div class="swiper-slide"><ul></ul></div>
+					<div class="swiper-slide"><ul></ul></div>
+					<div class="swiper-slide"><ul></ul></div>
+					<div class="swiper-slide"><ul></ul></div>
+				</div>
+			</div>
+		</div>
+		<footer class="foot">
+			<a href="index.html" class="f1">
+				<div class="image"><img src="../img/f1.png"></div>
+				<p>首页</p>
+			</a>
+			<a href="list.html" class="f1">
+				<div class="image active"><img src="../img/f2.png"></div>
+				<p>分类</p>
+			</a>
+			<a href="shopcar.html" class="f1">
+				<div class="image"><img src="../img/f3.png"></div>
+				<p>购物车</p>
+			</a>
+			<a href="mine.html" class="f1">
+				<div class="image"><img src="../img/f4.png"></div>
+				<p>我的秀</p>
+			</a>
+			<a href="more.html" class="f1">
+				<div class="image"><img src="../img/f5.png"></div>
+				<p>更多</p>
+			</a>
+		</footer>
+	</div>
+</body>
+
+		<script>
+		window.onload=function(){
+			$(function() {
+				var mySwiper2 = new Swiper('#swiper-container2', {
+					watchSlidesProgress: true,
+					watchSlidesVisibility: true,
+					slidesPerView: 10,
+					onTap: function() {
+						mySwiper3.slideTo(mySwiper2.clickedIndex)
+					}
+				})
+				var mySwiper3 = new Swiper('#swiper-container3', {
+					onSlideChangeStart: function() {
+						updateNavPosition()
+					}
+				})
+
+				function updateNavPosition() {
+					$('#swiper-container2 .swiper-slide-active').removeClass('swiper-slide-active')
+					$('#swiper-container2 .active-nav').removeClass('active-nav')
+					var activeNav = $('#swiper-container2 .swiper-slide').eq(mySwiper3.activeIndex).addClass('active-nav');
+
+					if(!activeNav.hasClass('swiper-slide-visible')) {
+						console.log(1);
+						if(activeNav.index() > mySwiper2.activeIndex) {
+							console.log(2);
+							var thumbsPerNav = Math.floor(mySwiper2.width / activeNav.width()) - 1
+							mySwiper2.slideTo(activeNav.index() - thumbsPerNav)
+						} else {
+							console.log(3);
+							mySwiper2.slideTo(activeNav.index())
+						}
+					}
+				}
+
+				//在对应的列表页中显示商品信息
+				var index=0;
+				for(var m=0;m<$("#swiper-container3 ul").length;m++){
+					$.ajax({
+						url: "http://datainfo.duapp.com/shopdata/getGoods.php",
+						dataType: "jsonp",
+						data:{
+							classID:m,
+						},
+						success: function(data) {
+							for(var i=0;i<data.length;i++){
+								$("#swiper-container3 ul").eq(index).append('<li><img src="'+
+								data[i].goodsListImg+
+								'"/><p style="text-align: center;" class="one">'+
+								data[i].goodsName+
+								'</p><p><span class="red left">￥<i>'+
+								data[i].price+
+								'</i></span><span class="right">￥<i>'+
+								data[i].price *2+
+								'</i></span></p></li>'		
+								)
+							}
+							index++;
+						}
+					});
+				}
+			})
+		}
+		</script>
+</html>

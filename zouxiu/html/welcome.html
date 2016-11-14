@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎来到走秀网~~~</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="../css/hah.css">
+    <link rel="stylesheet" href="../css/zouxiu.css">
+    <link rel="stylesheet" href="../css/swiper-3.3.1.min.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/swiper-3.3.1.min.js"></script>
+</head>
+<body>
+    <div class="welcome"><img src="../img/welcome.png"></div>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="../img/w1.png"></div>
+            <div class="swiper-slide"><img src="../img/w2.png"></div>
+            <div class="swiper-slide"><img src="../img/w3.png"></div>
+            <div class="swiper-slide"><img src="../img/w4.png"><a href="index.html"></a></div>
+        </div>
+    </div>
+    <script>
+    window.onload=function(){
+        $(function(){
+            var clientW=document.documentElement.clientWidth;
+            var clientH=document.documentElement.clientHeight;
+            $(".welcome").css({height:clientH});
+            $(".swiper-container").css({height:clientH});
+            setTimeout(function(){
+                $(".welcome").fadeOut(1500);
+            },300);
+            setTimeout(function(){
+                $(".swiper-container").css({display:"block"});
+                var mySwiper = new Swiper ('.swiper-container',{
+                    effect : 'fade',
+                })
+            },2000);
+        });
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>实拍</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="../css/hah.css" type="text/css">
+    <link rel="stylesheet" href="../css/zouxiu.css" type="text/css">
+    <link rel="stylesheet" href="../css/swiper-3.3.1.min.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/swiper-3.3.1.jquery.min.js"></script>
+</head>
+<body>
+<div class="contain">
+    <header id="head">
+        <img src="../img/back.png"><p class="shop">商品介绍</p><a href="#">分享</a>
+    </header>
+    <div class="move">
+        <div class="swiper-container xiang_q">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="../img/xiang1.png"></div>
+                <div class="swiper-slide"><img src="../img/xiang2.png"></div>
+                <div class="swiper-slide"><img src="../img/xiang3.png"></div>
+                <div class="swiper-slide"><img src="../img/xiang4.png"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="foot1">
+        <a href="goods_list.html" class="f11">介绍</a>
+        <a href="xiangqing.html" class="f11">详情</a>
+        <a href="photo.html" class="f11 active">实拍</a>
+    </footer>
+</div>
+<script>
+    window.onload=function(){
+        var mySwiper = new Swiper ('.swiper-container', {
+            speed:800,
+        });
+    }
+</script>
+</body>
+</html>

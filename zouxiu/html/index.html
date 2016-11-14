@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="../css/hah.css">
+    <link rel="stylesheet" href="../css/zouxiu.css">
+    <link rel="stylesheet" href="../css/swiper-3.3.1.min.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/swiper-3.3.1.jquery.min.js"></script>
+    <script src="../js/iscroll.js"></script>
+    <script src="../js/kua_yu.js"></script>
+    <script src="../js/shuaxin.js"></script>
+    <script src="../js/add_car.js"></script>
+</head>
+<body>
+<div class="contain">
+    <header id="head"><img src="../img/back.png" alt=""><p>ZXIU 走秀网</p></header>
+    <div class="search-box">
+        <input type="text" placeholder="请输入搜索内容" id="search" autocomplete="off">
+        <ul id="list">
+        </ul>
+    </div>
+    <div class="move">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="../img/banner1.jpg"></div>
+                <div class="swiper-slide"><img src="../img/banner2.jpg"></div>
+                <div class="swiper-slide"><img src="../img/banner3.jpg"></div>
+                <div class="swiper-slide"><img src="../img/banner4.jpg"></div>
+                <div class="swiper-slide"><img src="../img/banner5.jpg"></div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+        </div>
+        <section id="scroll-container">
+        	<div>
+	        	<div id="pull-down" class="pull">下拉刷新...</div>
+	        	<div class="goods_lists" id="scroll-list"></div>   
+	        	<div id="pull-up" class="pull">上拉加载...</div>
+        	</div>
+        </section>
+    </div>
+
+    <footer class="foot">
+        <a href="index.html" class="f1">
+            <div class="image active"><img src="../img/f1.png"></div><p>首页</p>
+        </a>
+        <a href="list.html" class="f1">
+            <div class="image"><img src="../img/f2.png"></div><p>分类</p>
+        </a>
+        <a href="shopcar.html" class="f1">
+            <div class="image"><img src="../img/f3.png"></div><p>购物车</p>
+        </a>
+        <a href="mine.html" class="f1">
+            <div class="image"><img src="../img/f4.png"></div><p>我的秀</p>
+        </a>
+        <a href="more.html" class="f1">
+            <div class="image"><img src="../img/f5.png"></div><p>更多</p>
+        </a>
+    </footer>
+</div>
+</body>
+<script>
+    $(function(){
+        var mySwiper = new Swiper ('.swiper-container', {
+            loop: true,
+            // 如果需要分页器
+            pagination: '.swiper-pagination',
+            //自动播放
+            autoplay : 3000,
+            speed:800,
+            autoplayDisableOnInteraction : false,
+        });
+        
+        
+        
+        
+        
+    })
+</script>
+</html>
