@@ -185,17 +185,17 @@ body{
 	box-sizing: border-box;
 	font-size: 0.3rem;
 	color: rgb(74, 205, 146);
-    overflow: hidden;
 }
-.work span{
-	float: left;
-	height: 100%;
-}
+
 .work .date{
 	width: 30%;
+	margin-left:1rem;
 }
 .work .address{
 	width: 60%;
+	height: 6rem;
+	margin-left:1rem;
+	margin-top: 1rem;
 }
 .weixin{
 	width: 6rem;
