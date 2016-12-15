@@ -28,7 +28,6 @@ html, body{
 /*轮播图*/
 .banner{
     width: 100%;
-    min-width: 1190px;
     position: relative;
 }
 #box {
@@ -47,19 +46,26 @@ html, body{
     display: none;
     filter: alpha(opacity:0);
     opacity: 0;
+    background-size: cover;
 }
-#flash-img-list li img{
-    width: 100%;
-    height:100%;
+#flash-img-list .one{
+    background:url("../images/ps1.png") no-repeat center 0;
 }
-#flash-img-list .kehu_duan img{
-    width: 300px;
-    height: 300px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-left: -150px;
-    margin-top: -150px;
+#flash-img-list .two{
+    background:url("../images/ps2.png") no-repeat center 0;
+}
+#flash-img-list .three{
+    background:url("../images/ps3.png") no-repeat center 0;
+}
+#flash-img-list .four{
+    background:url("../images/ps4.png") no-repeat center 0;
+}
+#flash-img-list .five{
+    background:url("../images/ps5.png") no-repeat center 0;
+}
+#flash-img-list .kehu_duan{
+    background:url("../images/kehu_duan.png") no-repeat center center;
+    background-size: 200px 200px;
 }
 #flash-img-list .first{
     display: block;
@@ -145,10 +151,11 @@ html, body{
     word-spacing: 2px;
 }
 #flash-img-list li .p61{
-    top: 200px;
+    top: 20%;
     font-size: 20px;
     letter-spacing: 2px;
     word-spacing: 2px;
+    margin-bottom: 20px;
 }
 
 
@@ -174,6 +181,8 @@ html, body{
 .logo{
     width: 20%;
     height: 100%;
+    background: url("../images/chic-logo.png") no-repeat center 10px;
+    background-size: 100px 40px;
 }
 .top-nav{
     width: 60%;
@@ -221,7 +230,7 @@ html, body{
 /*服务内容*/
 .services{
     width: 100%;
-    min-width: 1190px;
+    
 }
 .services .contain{
     width: 80%;
@@ -289,7 +298,7 @@ html, body{
 /*加入我们*/
 .portfolio{
     width: 100%;
-    min-width: 1190px;
+    
 }
 .portfolio-top{
     width: 100%;
@@ -364,7 +373,7 @@ html, body{
 /*模特照片区域*/
 .portfolio-works{
     width: 100%;
-    min-width: 1190px;
+    
     height: 680px;
 }
 .portfolio-works .con{
@@ -427,7 +436,7 @@ html, body{
 /*关于我们*/
 .about{
     width: 100%;
-    min-width: 1190px;
+    
     padding:3em 0;
 }
 .about-head{
@@ -586,7 +595,7 @@ html, body{
 /*联系我们*/
 .contact{
     width: 100%;
-    min-width: 1190px;
+    
     background: #111111;
     padding: 5em 0 0;
 }
