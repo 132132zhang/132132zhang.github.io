@@ -1002,7 +1002,7 @@ html, body{
 
 
 /*Smartphone*/
-@media screen and (max-width : 360px) {
+@media screen and (max-width : 640px) {
     #flash-img-list .kehu_duan img {
         width: 100px;
         height: 100px;
