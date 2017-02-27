@@ -1,0 +1,80 @@
+body{
+    width: 100%;
+    height: 100%;
+}
+ul,li{
+    list-style-type:none;
+}
+.headerBox{
+    text-align: center;
+}
+
+
+.add-list-ul{
+    background-color: #fff;
+    margin: 50px 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 15px;
+}
+.add-list-ul li{
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 30px;
+    position: relative;
+    height: 60px;
+    background-color: #fff;
+    border-bottom: 2px solid #eee;
+}
+.add-list-ul li p{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+}
+.add-list-ul li .buy-man{
+    font-weight: bolder;
+}
+.add-list-ul li p .tel{
+    margin-left: 20px;
+}
+
+.payment_em {
+    width: 16px;
+    height: 16px;
+    border-radius: 9px;
+    border: 1px solid #fff;
+    background-color: #eee;
+    position: absolute;
+    top: 21px;
+    left: 0px;
+}
+.checked .payment_em{
+    border: 1px solid #c60a1e;
+    background-color: #c60a1e;
+}
+.payment_em:after {
+    width: 3px;
+    height: 6px;
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff;
+    position: absolute;
+    content: "";
+    top: 3px;
+    left: 5px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+.add-list{
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    background-color: #fff;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    font-size: 16px;
+    color: #000;
+}
