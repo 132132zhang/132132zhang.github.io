@@ -13,16 +13,11 @@
 		body{
 			background: #eee;
 		}
-		.blank{
-			flex: 1;
-			text-align: center;
-		}
 		.box1{
 			width: 100%;
 			background: #fff;
 			box-sizing: border-box;
 			padding: 0 15px;
-			margin: 55px 0 0;
 		}
 		.box-inner1{
 			width: 100%;
@@ -61,8 +56,8 @@
 			width: 130px;
 			height:44px ;
 			font-size: 14px;
-			outline: none;
-			border: none;
+			outline: 0;
+			border: 0;
 			border-bottom: 1px solid #eee;
 		}
 		
@@ -70,10 +65,7 @@
 	</style>
 </head>
 <body>
- 	<div class="headerBox">
-        <div class="blank">新增收货地址</div>
-    </div>
-    
+
 	<div class="box1">
 		<div class="box-inner1">
 			<span>收货人：</span>
@@ -83,24 +75,22 @@
 			<span>手机号码：</span>
 			<input type="text" value="" placeholder="请输入收货人手机号"/>
 		</div>
-      <div data-toggle="distpicker">
-        <div class="form-group">
-          <label class="sr-only" for="province1">省份：</label>
-          <select class="form-control" id="province1"></select>
-        </div>
-        <div class="form-group">
-          <label class="sr-only" for="city1">城市：</label>
-          <select class="form-control" id="city1"></select>
-        </div>
-        <div class="form-group">
-          <label class="sr-only" for="district1">地区：</label>
-          <select class="form-control" id="district1"></select>
-        </div>
-      </div>
+		<div data-toggle="distpicker">
+			<div class="form-group">
+			  <label class="sr-only" for="province1">省份：</label>
+			  <select class="form-control" id="province1"></select>
+			</div>
+			<div class="form-group">
+			  <label class="sr-only" for="city1">城市：</label>
+			  <select class="form-control" id="city1"></select>
+			</div>
+			<div class="form-group">
+			  <label class="sr-only" for="district1">地区：</label>
+			  <select class="form-control" id="district1"></select>
+			</div>
+		</div>
     
-		
-		
-		
+
 		
 		<div class="box-inner1">
 			<span>详细地址：</span>

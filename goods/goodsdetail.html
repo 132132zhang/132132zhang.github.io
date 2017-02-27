@@ -23,12 +23,8 @@
     </script>
 </head>
 <body>
-    <div class="headerBox">
-        <a href="javascript:;" class="logo"></a>
-        <div class="blank"></div>
-    </div>
 
-    <div class="swiper-container" style="width: 100%;margin: 45px 0 0">
+    <div class="swiper-container" style="width: 100%">
         <div class="swiper-wrapper" style="width: 100%;height: 100%">
             <div class="swiper-slide"><img src="img/f7.jpg" alt="" class="img"/></div>
             <div class="swiper-slide"><img src="img/f7.jpg" alt="" class="img"/></div>
@@ -38,8 +34,8 @@
         <div class="swiper-pagination"></div>
     </div>
     <div class="goods">
-        <p class="goodsname">商品名字商品名字商品名字商品名字商品名字商品名字商品名字商品名字商品名字商品名字</p>
-        <p class="goodsprice">商品价格</p>
+        <p class="goodsname">商品名字商品名字</p>
+        <p class="goodsprice">￥20</p>
     </div>
 
     <!--支付方式的效果-->
@@ -82,7 +78,7 @@
     <div class="addcarBox">
             <div id="item_control_inner">
                 <div id="control_item_info">
-                    <img id="control_item_info_img" width="100" height="100" class="abs" src="img/f7.jpg">
+                    <div id="control_item_info_img" class="abs"></div>
                     <span id="control_seckill_price" class="">￥20.00</span>
                     <span id="control_item_info_price" class="i_pri"></span>
                     <!--<div id="control_item_selected_sku" class="hide">已选型号：</div>-->
@@ -106,9 +102,9 @@
                     <div id="control_count" class="">
                         <p class="control_tle gray_txt">数量</p>
                         <div id="control_num" class="left c_txt bold rel">
-                            <input type="button" id="control_num_sub" value="-">
-                            <input type="number" name="item_num" id="item_num" class="c_txt block" value="1">
-                            <input type="button" id="control_num_add" value="+">
+                            <div id="control_num_sub">-</div>
+                            <input type="tel" name="item_num" id="item_num" class="c_txt block" value="1">
+                            <div id="control_num_add">+</div>
                         </div>
                         <!--<div id="control_stock" class="left">库存20件</div>-->
                         <div class="clear"></div>

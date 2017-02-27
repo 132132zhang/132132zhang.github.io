@@ -29,29 +29,8 @@ body{
 em{
 	font-style: normal;
 }
-.headerBox{
-    width: 100%;
-    height: 45px;
-    line-height: 45px;
-    box-sizing: border-box;
-    padding: 0 10px;
-    font-size: 0.16rem;
-    background: #fff;
-    display: flex;
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 10;
-}
-.logo{
-    width: 50px;
-    height: 100%;
-    background: url("../img/logo.png") no-repeat center center;
-    background-size: 45px;
-}
-.blank{
-    flex: 1;
-}
+
+
 .swiper-slide img{
 	width: 100%;
 }
@@ -230,11 +209,16 @@ em{
 }
 /*商品图片*/
 #control_item_info_img {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
     position: absolute;
     bottom: 15px;
     left: 15px;
     border-radius: 6px;
     border: 1px solid #ddd;
+    background: url("../img/f7.jpg") no-repeat;
+    background-size: cover;
 }
 /*商品价钱*/
 #control_seckill_price, #seckill_price {
@@ -343,8 +327,9 @@ em{
 	color: #222;
 }
 #item_num{
+    display: inline-block;
 	width:44px;
-	height: 30px;
+	height: 32px;
 	text-align: center;
 	border-top: 1px solid #c4c4c4;
 	border-bottom: 1px solid #c4c4c4;
