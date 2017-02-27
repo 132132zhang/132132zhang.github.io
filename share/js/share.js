@@ -156,22 +156,21 @@ $(function(){
     //具有.img类名的图片 点击可出现大图
     $(document).on("click",".img",function(){
         var attr = $(this).attr("data-image");
-	    alert(1);
         console.log(attr);
-//         var index = $(".ig"+ attr +" .img").index($(this));//点击图片下标 设置swiper初始索引
-//         console.log(index);
-//         $(".swiper").append('<div class="swiper-container"><div class="swiper-wrapper"></div></div>')
-//         $(".swiper-container").show();
+        var index = $(".ig"+ attr +" .img").index($(this));//点击图片下标 设置swiper初始索引
+        console.log(index);
+        $(".swiper").append('<div class="swiper-container"><div class="swiper-wrapper"></div></div>')
+        $(".swiper-container").show();
 
-//         for(var j = 0;j<$(".ig"+ attr +" .img").length;j++){
-//             var img = $(".ig"+ attr +" .img").eq(j).attr("src");
-//             $(".swiper-wrapper").append('<div class="swiper-slide"><img src="'+ img +'"/><span></span></div>')
-//                     }
-//         var mySwiper = new Swiper('.swiper-container', {
-//             //pagination : '.swiper-pagination',
-//             //loop : true,
-//             initialSlide :index
-//         })
+        for(var j = 0;j<$(".ig"+ attr +" .img").length;j++){
+            var img = $(".ig"+ attr +" .img").eq(j).attr("src");
+            $(".swiper-wrapper").append('<div class="swiper-slide"><img src="'+ img +'"/><span></span></div>')
+                    }
+        var mySwiper = new Swiper('.swiper-container', {
+            //pagination : '.swiper-pagination',
+            //loop : true,
+            initialSlide :index
+        })
     });
     //点击隐藏
     $(".swiper").click(function(){
