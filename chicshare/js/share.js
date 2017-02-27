@@ -154,7 +154,7 @@ $(function(){
 
 
     //具有.img类名的图片 点击可出现大图
-    $("body").on("click",".img",function(){
+    $(".img").bind("click",function(){
         var attr = $(this).attr("data-image");
 	    alert(1);
         console.log(attr);
