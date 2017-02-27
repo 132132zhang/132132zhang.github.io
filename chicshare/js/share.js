@@ -156,6 +156,7 @@ $(function(){
     //具有.img类名的图片 点击可出现大图
     $(document).on("click",".img",function(){
         var attr = $(this).attr("data-image");
+	    alert(1);
         console.log(attr);
         var index = $(".ig"+ attr +" .img").index($(this));//点击图片下标 设置swiper初始索引
         console.log(index);
