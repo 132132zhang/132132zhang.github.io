@@ -24,16 +24,6 @@ $(function(){
     });
 
 
-//是否收藏
-    var Iscollect=false;
-    $(".collect").click(function(){
-        Iscollect=!Iscollect;
-        if (Iscollect==true){
-            $(".collect").addClass("collected");
-        }else {
-            $(".collect").removeClass("collected");
-        }
-    });
 //选择商品分类 
 $("#sku_ul .sku_li").click(function(){
 	var index = $("#sku_ul .sku_li").index($(this));
@@ -97,7 +87,7 @@ $("#sku_ul .sku_li").click(function(){
 		}
 	})
 	
-	
+
 	
 	
 	
